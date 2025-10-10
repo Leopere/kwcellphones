@@ -1,0 +1,195 @@
+<!--
+=======================================================================
+IMPORTANT: THIS SITE USES HTML PARTIALS FOR STANDARDIZATION
+=======================================================================
+- ALWAYS use the JavaScript partial loading system:
+  <div id="header-partial"></div>
+  <div id="footer-partial"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+- NEVER disable or remove the partials inclusion in pages
+- NEVER add navigation code directly to individual pages
+- Partials ensure consistent navigation and footer across the site
+- Any navigation/footer changes should ONLY be made in the partials
+- You CAN and SHOULD modify the partials when updates are needed
+=======================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>About [Your Company Name] - iPhone, MacBook, PS5 Repair</title>
+  <meta name="description" content="About [Your Company Name]. Expert iPhone, Samsung, MacBook, iPad, PS5 repair. Professional device repair services.">
+  <meta name="keywords" content="about [Your Company Name], device repair, repair shop, iPhone repair, tech repair, local repair shop">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://[yourdomain.com]/about.html" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="About Us - [Your Company Name]" />
+  <meta property="og:description" content="Learn about [Your Company Name] and our commitment to quality device repair services." />
+  <meta property="og:image" content="https://[yourdomain.com]/images/about-us.webp" />
+  <meta property="og:url" content="https://[yourdomain.com]/about.html" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Local fonts -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Function to load partials
+    function loadPartial(url, targetId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          // Extract only the body content from the partial
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = data;
+          
+          // Find the content between the body tags, excluding the body tags themselves
+          const bodyContent = data.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+          
+          if (bodyContent && bodyContent[1]) {
+            // Use the content between body tags
+            document.getElementById(targetId).innerHTML = bodyContent[1].trim();
+          } else {
+            // Fallback to using the entire content
+            document.getElementById(targetId).innerHTML = data;
+          }
+        });
+    }
+  </script>
+</head>
+<body>
+  <!-- HEADER PARTIAL - DO NOT REMOVE -->
+  <div id="header-partial"></div>
+
+  <main id="main-content" role="main">
+    <!-- Page Header -->
+    <section class="page-header" aria-labelledby="page-heading">
+      <div class="container">
+        <h1 id="page-heading">About [Your Company Name]</h1>
+        <p>Your trusted partner for professional device repair services.</p>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <h2 id="story-heading">Our Story</h2>
+            <p>[Your Company Name] was established with a simple mission: to provide high-quality, affordable device repair services to our community.</p>
+            
+            <p>What started as a small repair shop has grown into a trusted name, known for our technical expertise, transparent pricing, and exceptional customer service.</p>
+            
+            <h3 id="values-heading">Our Values</h3>
+            <ul class="value-list">
+              <li><strong>Quality:</strong> We use only genuine parts and industry-standard tools for all repairs.</li>
+              <li><strong>Transparency:</strong> We provide detailed diagnostics and upfront pricing with no hidden fees.</li>
+              <li><strong>Reliability:</strong> Our 14-day warranty backs every repair we complete.</li>
+              <li><strong>Expertise:</strong> Our technicians are certified and continuously trained on the latest repair techniques.</li>
+            </ul>
+          </div>
+          
+          <div class="about-image">
+            <img src="images/about-us.webp" alt="Front view of a budget Android smartphone with a teardrop notch, thick top and bottom bezels, and a glossy black frame. The screen displays a soft pastel gradient wallpaper transitioning from pink at the bottom to light blue at the top with overlapping circular shapes." class="img-responsive">
+            <div class="image-caption" aria-label="Image caption">Our repair workshop at [Your Street Address], [Your City]</div>
+          </div>
+        </div>
+        
+        <div class="team-section" aria-labelledby="team-heading">
+          <h2 id="team-heading">Our Expert Team</h2>
+          <p>Our technicians have over 20 years of combined experience repairing all types of devices from major brands. Each team member is certified and continuously trained to stay current with the latest technology.</p>
+          
+          <div class="expertise-grid">
+            <article class="expertise-card">
+              <div class="expertise-icon" aria-hidden="true">📱</div>
+              <h3>Phone Specialists</h3>
+              <p>Experts in iPhone, Samsung, Google Pixel, and other major smartphone brands.</p>
+            </article>
+            
+            <article class="expertise-card">
+              <div class="expertise-icon" aria-hidden="true">💻</div>
+              <h3>Computer Technicians</h3>
+              <p>Certified in both Mac and PC repairs, from hardware issues to software troubleshooting.</p>
+            </article>
+            
+            <article class="expertise-card">
+              <div class="expertise-icon" aria-hidden="true">🎮</div>
+              <h3>Console Repair Pros</h3>
+              <p>Specialized in PlayStation, Xbox, and Nintendo console repairs and modifications.</p>
+            </article>
+          </div>
+        </div>
+        
+        <div class="community-section" aria-labelledby="community-heading">
+          <h2 id="community-heading">Community Involvement</h2>
+          <p>We're proud to be part of the [Your City/Region] community. We regularly participate in local events, offer special discounts to students and seniors, and provide educational workshops on device maintenance and repair.</p>
+          
+          <a href="contact.html" class="btn btn-primary">Contact Us Today</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PARTIAL - DO NOT REMOVE -->
+  <div id="footer-partial"></div>
+  
+  <script>
+    // Load header and footer partials
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "[Your Company Name]",
+    "description": "Professional device repair services for smartphones, laptops, tablets, and gaming consoles.",
+    "image": "https://[yourdomain.com]/images/about-us.webp",
+    "url": "https://[yourdomain.com]",
+    "telephone": "[Your Phone Number]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[Your Street Address]",
+      "addressLocality": "[Your City]",
+      "addressRegion": "[Your State/Province]",
+      "postalCode": "[Your ZIP/Postal Code]",
+      "addressCountry": "[Your Country Code]"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "10:00",
+        "closes": "17:00"
+      }
+    ],
+    "priceRange": "$$"
+  }
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

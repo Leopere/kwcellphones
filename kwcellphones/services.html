@@ -1,0 +1,370 @@
+<!--
+=======================================================================
+IMPORTANT: THIS SITE USES HTML PARTIALS FOR STANDARDIZATION
+=======================================================================
+- ALWAYS use the JavaScript partial loading system:
+  <div id="header-partial"></div>
+  <div id="footer-partial"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+- NEVER disable or remove the partials inclusion in pages
+- NEVER add navigation code directly to individual pages
+- Partials ensure consistent navigation and footer across the site
+- Any navigation/footer changes should ONLY be made in the partials
+- You CAN and SHOULD modify the partials when updates are needed
+=======================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Device Repair Services | iPhone, MacBook, PS5 Repair</title>
+  <meta name="description" content="Complete iPhone, Samsung, MacBook, iPad, PS5 repair services. Screen repair, battery replacement, water damage fix. Same-day service.">
+  <meta name="keywords" content="device repair, repair services, iPhone repair, MacBook repair, Samsung repair, iPad repair, PS5 repair, Xbox repair, Nintendo Switch repair, phone screen repair near me, laptop repair services, tablet repair, console repair, tech repair">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://[yourdomain.com]/services.html" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Device Repair Services | iPhone, MacBook, PS5" />
+  <meta property="og:description" content="Complete iPhone, Samsung, MacBook, iPad, PS5 repair. Screen repair, battery replacement." />
+  <meta property="og:image" content="https://[yourdomain.com]/images/hero-image.webp" />
+  <meta property="og:url" content="https://[yourdomain.com]/services.html" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Local fonts -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Function to load partials
+    function loadPartial(url, targetId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          // Extract only the body content from the partial
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = data;
+          
+          // Find the content between the body tags, excluding the body tags themselves
+          const bodyContent = data.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+          
+          if (bodyContent && bodyContent[1]) {
+            // Use the content between body tags
+            document.getElementById(targetId).innerHTML = bodyContent[1].trim();
+          } else {
+            // Fallback to using the entire content
+            document.getElementById(targetId).innerHTML = data;
+          }
+        });
+    }
+  </script>
+</head>
+<body>
+  <!-- HEADER PARTIAL - DO NOT REMOVE -->
+  <div id="header-partial"></div>
+
+  <main id="main-content" role="main">
+    <!-- Page Header -->
+    <section class="page-header" aria-labelledby="page-heading">
+      <div class="container">
+        <h1 id="page-heading">Device Repair Services</h1>
+        <p>Complete iPhone, Samsung, MacBook, iPad, and PS5 repair services. Serving [Your City/Region]. Expert technicians, genuine parts, same-day service, 14-day warranty.</p>
+      </div>
+    </section>
+
+    <!-- Services Detail Section -->
+    <section class="services-detail" aria-label="Detailed Service Information">
+      <div class="container">
+        <!-- Smartphone Repair -->
+        <article class="service-detail-item" aria-labelledby="smartphone-repair-heading">
+          <div class="service-detail-image">
+            <img src="images/phone-repair.webp" alt="A hand holding an iPhone 16 Pro (in Desert Titanium color) in portrait orientation against a black background. The lock screen shows the time 9:41 on Monday, September 9, with a dark abstract wallpaper featuring flowing bronze-colored shapes and a colorful glowing edge around the phone." class="img-responsive">
+          </div>
+          <div class="service-detail-content">
+            <h2 id="smartphone-repair-heading">Smartphone Repair</h2>
+            <p>Complete smartphone repair services for all major brands including iPhone, Samsung, Google Pixel, and more.</p>
+            <div class="service-features-grid">
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Screen and LCD replacement</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Battery replacement and optimization</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Water damage repair and recovery</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Camera and speaker repairs</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Charging port replacement</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Software troubleshooting and updates</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Data recovery services</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Back glass replacement</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+          </div>
+        </article>
+
+        <!-- Laptop Repair -->
+        <article class="service-detail-item reverse" aria-labelledby="laptop-repair-heading">
+          <div class="service-detail-image">
+            <img src="images/laptop-repair.webp" alt="A Huawei MateBook D 14 laptop (gray/silver model) floating at an angle against a light blue gradient background, lid open, displaying a colorful abstract wave wallpaper in blue, orange, and purple on the screen." class="img-responsive">
+          </div>
+          <div class="service-detail-content">
+            <h2 id="laptop-repair-heading">Laptop & Computer Repair</h2>
+            <p>Professional laptop and desktop computer repair services for both Windows and Mac systems.</p>
+            <div class="service-features-grid">
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Hardware diagnostics and repair</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Virus removal and malware cleanup</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Performance optimization and tuning</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>RAM and SSD upgrades</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Screen replacement and repair</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Keyboard and trackpad replacement</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Power jack and motherboard repair</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Data backup and recovery</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+          </div>
+        </article>
+
+        <!-- Game Console Repair -->
+        <article class="service-detail-item" aria-labelledby="console-repair-heading">
+          <div class="service-detail-image">
+            <img src="images/console-repair.webp" alt="A white PlayStation 5 Pro console (disc edition) standing vertically next to its white DualSense wireless controller, shown against a clean white background. The console features the characteristic black central stripe with subtle ventilation lines." class="img-responsive">
+          </div>
+          <div class="service-detail-content">
+            <h2 id="console-repair-heading">Game Console Repair</h2>
+            <p>Expert repair services for all gaming consoles including PlayStation, Xbox, Nintendo Switch, and retro systems.</p>
+            <div class="service-features-grid">
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>PlayStation 5, PS4, and PS3 repairs</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Xbox Series X/S, One, and 360 repairs</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Nintendo Switch and Switch Lite repairs</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Controller repairs and modifications</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>HDMI port replacement</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Overheating and cooling system repair</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Power supply replacement</span>
+              </div>
+              <div class="service-feature">
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Game loading and disc read errors</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Repair Process Section -->
+    <section class="repair-process" aria-labelledby="repair-process-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="repair-process-heading">Our Repair Process</h2>
+          <p>Simple, transparent, and efficient. Here's how we get your device back to perfect working condition.</p>
+        </div>
+        <ol class="process-steps">
+          <li class="process-step">
+            <div class="step-number" aria-hidden="true">1</div>
+            <h3>Free Diagnostic</h3>
+            <p>Bring in your device for a comprehensive diagnostic assessment. No charge, no obligation.</p>
+          </li>
+          <li class="process-step">
+            <div class="step-number" aria-hidden="true">2</div>
+            <h3>Quote & Approval</h3>
+            <p>Receive a detailed quote with transparent pricing. Proceed only when you approve the repair.</p>
+          </li>
+          <li class="process-step">
+            <div class="step-number" aria-hidden="true">3</div>
+            <h3>Expert Repair</h3>
+            <p>Our certified technicians use genuine parts and industry-standard tools for quality repairs.</p>
+          </li>
+          <li class="process-step">
+            <div class="step-number" aria-hidden="true">4</div>
+            <h3>Quality Testing</h3>
+            <p>Thorough testing ensures your device works perfectly before pickup. 14-day warranty included.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Warranty Section -->
+    <section class="warranty" aria-labelledby="warranty-heading">
+      <div class="container">
+        <div class="warranty-content">
+          <div class="warranty-icon" aria-hidden="true">🛡️</div>
+          <h2 id="warranty-heading">14-Day Warranty Guarantee</h2>
+          <p>We stand behind our work with a comprehensive 14-day warranty on all repairs. If you experience any issues with our repair work, we'll fix it free of charge. Your satisfaction is our guarantee.</p>
+          <a href="contact.html" class="btn btn-dark">Schedule Your Repair</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready to Fix Your Device?</h2>
+        <p>Get your free diagnostic and quote today.</p>
+        <a href="contact.html" class="btn btn-dark">Contact Us Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PARTIAL - DO NOT REMOVE -->
+  <div id="footer-partial"></div>
+  
+  <script>
+    // Load header and footer partials
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "[Your Company Name]",
+    "description": "Comprehensive repair services for smartphones, laptops, tablets, and gaming consoles. Expert technicians, genuine parts, and 14-day warranty.",
+    "image": "https://[yourdomain.com]/images/logo.svg",
+    "url": "https://[yourdomain.com]",
+    "telephone": "[Your Phone Number]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[Your Street Address]",
+      "addressLocality": "[Your City]",
+      "addressRegion": "[Your State/Province]",
+      "postalCode": "[Your ZIP/Postal Code]",
+      "addressCountry": "[Your Country Code]"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Device Repair Services",
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Smartphone Repair Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Screen and LCD replacement"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Battery replacement and optimization"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Water damage repair and recovery"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Laptop Repair Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Hardware diagnostics and repair"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Performance optimization and tuning"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

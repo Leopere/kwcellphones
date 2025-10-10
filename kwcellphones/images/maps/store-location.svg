@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Map background -->
+  <rect x="0" y="0" width="800" height="300" fill="#f2eee8" />
+  
+  <!-- Roads -->
+  <rect x="100" y="140" width="600" height="20" fill="#cccccc" />
+  <rect x="390" y="50" width="20" height="200" fill="#cccccc" />
+  
+  <!-- Store location marker -->
+  <circle cx="400" cy="150" r="15" fill="#d4af37" stroke="#333333" stroke-width="2" />
+  <circle cx="400" cy="150" r="5" fill="#333333" />
+  
+  <!-- Road labels -->
+  <text x="400" y="130" font-family="Arial" font-size="12" text-anchor="middle" fill="#333333">Ottawa St S</text>
+  <text x="420" y="150" font-family="Arial" font-size="12" text-anchor="start" fill="#333333">207</text>
+  
+  <!-- Legend -->
+  <rect x="600" y="20" width="180" height="60" fill="white" stroke="#cccccc" />
+  <circle cx="620" cy="40" r="10" fill="#d4af37" stroke="#333333" stroke-width="2" />
+  <text x="640" y="45" font-family="Arial" font-size="14" fill="#333333">Tech Device Repair</text>
+  <text x="640" y="65" font-family="Arial" font-size="12" fill="#333333">207 Ottawa St S</text>
+  
+  <!-- North arrow -->
+  <polygon points="50,50 40,70 60,70" fill="#333333" />
+  <text x="50" y="90" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">N</text>
+  
+  <!-- Scale bar -->
+  <line x1="50" y1="250" x2="150" y2="250" stroke="#333333" stroke-width="2" />
+  <text x="100" y="270" font-family="Arial" font-size="12" text-anchor="middle" fill="#333333">100m</text>
+</svg>

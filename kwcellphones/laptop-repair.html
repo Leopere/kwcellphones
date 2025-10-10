@@ -1,0 +1,341 @@
+<!--
+=======================================================================
+IMPORTANT: THIS SITE USES HTML PARTIALS FOR STANDARDIZATION
+=======================================================================
+- ALWAYS use the JavaScript partial loading system:
+  <div id="header-partial"></div>
+  <div id="footer-partial"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+- NEVER disable or remove the partials inclusion in pages
+- NEVER add navigation code directly to individual pages
+- Partials ensure consistent navigation and footer across the site
+- Any navigation/footer changes should ONLY be made in the partials
+- You CAN and SHOULD modify the partials when updates are needed
+=======================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>MacBook Repair | Dell, HP Laptop Repair - Slow Laptop Fix</title>
+  <meta name="description" content="Expert MacBook Pro/Air, Dell XPS, HP, Lenovo laptop repair. Laptop running slow, won't turn on, broken hinge fix. Student discounts available.">
+  <meta name="keywords" content="MacBook repair, laptop running slow fix, Dell XPS repair, HP laptop repair, laptop won't turn on, MacBook Pro screen repair, laptop broken hinge, Lenovo ThinkPad repair, slow laptop, MacBook Air keyboard replacement, laptop repair near me, computer repair, student laptop repair, MacBook battery replacement">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://[yourdomain.com]/laptop-repair.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="MacBook & Laptop Repair | Slow Laptop Fix" />
+  <meta property="og:description" content="Expert MacBook Pro/Air, Dell XPS, HP, Lenovo laptop repair. Laptop running slow, won't turn on, broken hinge fix. Student discounts." />
+  <meta property="og:image" content="https://[yourdomain.com]/images/laptop-repair.webp" />
+  <meta property="og:url" content="https://[yourdomain.com]/laptop-repair.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Local fonts -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Function to load partials
+    function loadPartial(url, targetId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          // Extract only the body content from the partial
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = data;
+
+          // Find the content between the body tags, excluding the body tags themselves
+          const bodyContent = data.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+
+          if (bodyContent && bodyContent[1]) {
+            // Use the content between body tags
+            document.getElementById(targetId).innerHTML = bodyContent[1].trim();
+          } else {
+            // Fallback to using the entire content
+            document.getElementById(targetId).innerHTML = data;
+          }
+        });
+    }
+  </script>
+</head>
+<body>
+  <!-- HEADER PARTIAL - DO NOT REMOVE -->
+  <div id="header-partial"></div>
+
+  <main id="main-content" role="main">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>MacBook & Laptop Repair</h1>
+        <p>Expert MacBook Pro, MacBook Air, Dell XPS, HP, Lenovo ThinkPad repair. Laptop running slow? Won't turn on? Broken hinge? We fix it. Serving [Your City/Region].</p>
+      </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="service-overview">
+      <div class="container">
+        <div class="service-intro">
+          <div class="service-image">
+            <picture>
+              <source srcset="images/laptop-repair.webp" type="image/webp">
+              <img src="images/laptop-repair.webp" alt="A Huawei MateBook D 14 laptop (gray/silver model) floating at an angle against a light blue gradient background, lid open, displaying a colorful abstract wave wallpaper in blue, orange, and purple on the screen." width="600" height="400" loading="lazy">
+            </picture>
+          </div>
+          <div class="service-description">
+            <h2>MacBook Pro, Dell XPS, HP & Lenovo Laptop Repair Near You</h2>
+            <p>Is your laptop running slow? Won't turn on? Broken screen or hinge? We repair MacBook Pro, MacBook Air, Dell XPS 13/15, HP Pavilion, Lenovo ThinkPad, and all laptop brands. Expert in Windows, macOS, and Linux. Located in [Your City/Region]. Student discounts available.</p>
+            <div class="service-features">
+              <div class="feature">
+                <h3>🛠️ Expert Diagnostics</h3>
+                <p>Advanced tools to identify hardware and software issues</p>
+              </div>
+              <div class="feature">
+                <h3>💾 Data Recovery</h3>
+                <p>Safe data backup and recovery services</p>
+              </div>
+              <div class="feature">
+                <h3>⚡ Fast Turnaround</h3>
+                <p>Most repairs completed within 24-48 hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="services-offered">
+      <div class="container">
+        <h2>MacBook & Laptop Repair Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🖥️</div>
+            <h3>Broken Screen Repair</h3>
+            <p>MacBook Pro/Air, Dell, HP laptop cracked or broken screen replacement. Retina display, 4K, all resolutions supported.</p>
+            <div class="service-price">From $129</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">⌨️</div>
+            <h3>MacBook Keyboard Replacement</h3>
+            <p>MacBook butterfly keyboard replacement, sticky keys fix. Dell, HP, Lenovo keyboard repair and replacement.</p>
+            <div class="service-price">From $79</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">💽</div>
+            <h3>Data Recovery Service</h3>
+            <p>Laptop won't boot? Recover files from damaged hard drives, failed SSDs, or corrupted storage. Safe data rescue.</p>
+            <div class="service-price">From $99</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🦠</div>
+            <h3>Slow Laptop Fix & Virus Removal</h3>
+            <p>Laptop running slow? Complete virus, malware removal. System cleanup and optimization. Speed up your laptop.</p>
+            <div class="service-price">From $89</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Performance Upgrade & SSD Installation</h3>
+            <p>Speed up slow laptop. RAM upgrades, SSD installation for MacBook, Dell, HP. Boost performance dramatically.</p>
+            <div class="service-price">From $69</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🔌</div>
+            <h3>Laptop Won't Turn On / Broken Hinge Fix</h3>
+            <p>Laptop won't power on? Fix charging ports, DC jacks, power issues. Broken hinge repair for all laptop brands.</p>
+            <div class="service-price">From $59</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+      <div class="container">
+        <h2>Why Choose [Your Company Name] for Laptop Repair?</h2>
+        <div class="benefits-grid">
+          <div class="benefit">
+            <h3>MacBook & All Brands Expert</h3>
+            <p>Specialists in MacBook Pro/Air, Dell XPS, HP Pavilion, Lenovo ThinkPad, ASUS, Acer. All Windows and macOS repairs.</p>
+          </div>
+          <div class="benefit">
+            <h3>Student Discounts Available</h3>
+            <p>Special rates for students. Your data is always protected.</p>
+          </div>
+          <div class="benefit">
+            <h3>14-Day Warranty</h3>
+            <p>All MacBook and laptop repairs backed by 14-day warranty. Quality parts, guaranteed repairs.</p>
+          </div>
+          <div class="benefit">
+            <h3>Fast Service in Downtown Kitchener</h3>
+            <p>Most repairs done within 24-48 hours. Convenient drop-off and pickup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>MacBook or Laptop Repair?</h2>
+        <p>Laptop running slow? Won't turn on? Broken screen? Visit us or get a free diagnostic today. Student discounts available.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary">Get Free Diagnostic</a>
+          <a href="tel:[your-phone-number]" class="btn btn-secondary">Call Now: [Your Phone Number]</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PARTIAL - DO NOT REMOVE -->
+  <div id="footer-partial"></div>
+
+  <script>
+    // Load header and footer partials
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+
+  <!-- Structured Data - Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "MacBook and Laptop Repair Services",
+    "description": "Expert MacBook Pro/Air, Dell XPS, HP, Lenovo laptop repair. Slow laptop fix, broken screen, keyboard replacement, data recovery.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "[Your Company Name]",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[Your Street Address]",
+        "addressLocality": "[Your City]",
+        "addressRegion": "[Your State/Province]",
+        "postalCode": "[Your ZIP/Postal Code]",
+        "addressCountry": "[Your Country Code]"
+      },
+      "telephone": "[Your Phone Number]",
+      "url": "https://[yourdomain.com]"
+    },
+    "serviceType": "Computer Repair",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "MacBook Screen Repair",
+        "description": "MacBook Pro and Air broken screen replacement",
+        "price": "129",
+        "priceCurrency": "CAD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Laptop Data Recovery",
+        "description": "Recover data from damaged laptops and failed drives",
+        "price": "99",
+        "priceCurrency": "CAD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Slow Laptop Fix",
+        "description": "Speed up slow laptop with virus removal and optimization",
+        "price": "89",
+        "priceCurrency": "CAD"
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema for Featured Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does MacBook screen repair cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MacBook screen repair starts from $129. The exact cost depends on your MacBook model (MacBook Pro, MacBook Air, screen size). We provide free diagnostics and quotes before starting repair."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My laptop is running very slow, can you fix it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we fix slow laptops by removing viruses, optimizing system performance, and upgrading hardware (RAM, SSD). Slow laptop fix starts at $89. Most laptops can be significantly sped up with our service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you repair Dell XPS and HP laptops?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we repair Dell XPS 13/15, HP Pavilion, HP Envy, and all Dell and HP laptop models. Services include screen repair, keyboard replacement, battery replacement, and data recovery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My laptop won't turn on, can you fix it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we diagnose and fix laptops that won't turn on. Common causes include power supply issues, battery problems, or motherboard failures. Bring your laptop in for free diagnostic to determine the issue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you fix a broken laptop hinge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we repair broken laptop hinges on all brands including Dell, HP, Lenovo, ASUS. Broken hinge repair starts at $59 and prevents further damage to your laptop screen and casing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer student discounts for laptop repair?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer student discounts. Bring your student ID when you visit our location for special rates on laptop repairs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you replace a MacBook keyboard?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we replace MacBook keyboards including problematic butterfly keyboards. MacBook keyboard replacement starts at $79. We fix sticky keys, non-responsive keys, and complete keyboard failures."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you recover data from laptops that won't boot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer data recovery from laptops that won't boot or have failed hard drives/SSDs. Data recovery starts at $99. We can recover files, photos, documents from damaged storage devices."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

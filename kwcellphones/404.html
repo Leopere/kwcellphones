@@ -1,0 +1,84 @@
+<!--
+=======================================================================
+IMPORTANT: THIS SITE USES HTML PARTIALS FOR STANDARDIZATION
+=======================================================================
+- ALWAYS use the JavaScript partial loading system:
+  <div id="header-partial"></div>
+  <div id="footer-partial"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+- NEVER disable or remove the partials inclusion in pages
+- NEVER add navigation code directly to individual pages
+- Partials ensure consistent navigation and footer across the site
+- Any navigation/footer changes should ONLY be made in the partials
+- You CAN and SHOULD modify the partials when updates are needed
+=======================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Page Not Found - Tech Device Repair</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Function to load partials
+    function loadPartial(url, targetId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          // Extract only the body content from the partial
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = data;
+          
+          // Find the content between the body tags, excluding the body tags themselves
+          const bodyContent = data.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+          
+          if (bodyContent && bodyContent[1]) {
+            // Use the content between body tags
+            document.getElementById(targetId).innerHTML = bodyContent[1].trim();
+          } else {
+            // Fallback to using the entire content
+            document.getElementById(targetId).innerHTML = data;
+          }
+        });
+    }
+  </script>
+</head>
+<body>
+  <!-- HEADER PARTIAL - DO NOT REMOVE -->
+  <div id="header-partial"></div>
+
+  <main id="main-content" role="main">
+    <section class="error-section">
+      <div class="container">
+        <h1>404 - Page Not Found</h1>
+        <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PARTIAL - DO NOT REMOVE -->
+  <div id="footer-partial"></div>
+  
+  <script>
+    // Load header and footer partials
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

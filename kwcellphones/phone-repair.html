@@ -1,0 +1,341 @@
+<!--
+=======================================================================
+IMPORTANT: THIS SITE USES HTML PARTIALS FOR STANDARDIZATION
+=======================================================================
+- ALWAYS use the JavaScript partial loading system:
+  <div id="header-partial"></div>
+  <div id="footer-partial"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+- NEVER disable or remove the partials inclusion in pages
+- NEVER add navigation code directly to individual pages
+- Partials ensure consistent navigation and footer across the site
+- Any navigation/footer changes should ONLY be made in the partials
+- You CAN and SHOULD modify the partials when updates are needed
+=======================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>iPhone Repair | Samsung Galaxy, Pixel Screen Repair</title>
+  <meta name="description" content="Expert iPhone 16/15/14, Samsung Galaxy S24/S23, Google Pixel repair. Cracked screen fix, battery draining fast, phone won't charge. Same-day service.">
+  <meta name="keywords" content="iPhone repair, Samsung repair, cracked screen repair near me, phone won't charge, iPhone screen replacement, Samsung Galaxy S24 repair, iPhone 15 battery replacement, Google Pixel repair, phone water damage fix, battery draining fast, phone repair, smartphone repair, iPhone 14 screen repair, phone won't turn on">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://[yourdomain.com]/phone-repair.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="iPhone & Samsung Repair | Cracked Screen Fix" />
+  <meta property="og:description" content="Expert iPhone 16/15/14, Samsung Galaxy S24/S23, Google Pixel repair. Cracked screen fix, battery draining fast, phone won't charge. Same-day service." />
+  <meta property="og:image" content="https://[yourdomain.com]/images/phone-repair.webp" />
+  <meta property="og:url" content="https://[yourdomain.com]/phone-repair.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Local fonts -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Function to load partials
+    function loadPartial(url, targetId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          // Extract only the body content from the partial
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = data;
+
+          // Find the content between the body tags, excluding the body tags themselves
+          const bodyContent = data.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+
+          if (bodyContent && bodyContent[1]) {
+            // Use the content between body tags
+            document.getElementById(targetId).innerHTML = bodyContent[1].trim();
+          } else {
+            // Fallback to using the entire content
+            document.getElementById(targetId).innerHTML = data;
+          }
+        });
+    }
+  </script>
+</head>
+<body>
+  <!-- HEADER PARTIAL - DO NOT REMOVE -->
+  <div id="header-partial"></div>
+
+  <main id="main-content" role="main">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>iPhone & Samsung Repair</h1>
+        <p>Expert repair for iPhone 16, 15, 14, Samsung Galaxy S24, S23, Google Pixel. Cracked screens, battery draining fast, phone won't charge. Serving [Your City/Region].</p>
+      </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="service-overview">
+      <div class="container">
+        <div class="service-intro">
+          <div class="service-image">
+            <picture>
+              <source srcset="images/phone-repair.webp" type="image/webp">
+              <img src="images/phone-repair.webp" alt="A hand holding an iPhone 16 Pro (in Desert Titanium color) in portrait orientation against a black background. The lock screen shows the time 9:41 on Monday, September 9, with a dark abstract wallpaper featuring flowing bronze-colored shapes and a colorful glowing edge around the phone." width="600" height="400" loading="lazy">
+            </picture>
+          </div>
+          <div class="service-description">
+            <h2>iPhone 16, 15, 14 & Samsung Galaxy S24, S23 Repair Near You</h2>
+            <p>Cracked screen? Battery draining fast? Phone won't charge? We fix iPhone 16, 15, 14, 13, Samsung Galaxy S24, S23, S22, Google Pixel 8, 7, and all smartphone brands. Located in [Your City/Region]. Same-day service available.</p>
+            <div class="service-features">
+              <div class="feature">
+                <h3>⚡ Same-Day Service</h3>
+                <p>Most repairs completed while you wait</p>
+              </div>
+              <div class="feature">
+                <h3>🔧 Genuine Parts</h3>
+                <p>OEM parts for reliable repairs</p>
+              </div>
+              <div class="feature">
+                <h3>🛡️ 14-Day Warranty</h3>
+                <p>All repairs backed by warranty</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="services-offered">
+      <div class="container">
+        <h2>iPhone & Samsung Phone Repair Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>Cracked Screen Repair</h3>
+            <p>iPhone 16/15/14, Samsung Galaxy S24/S23 cracked or shattered screen replacement. High-quality OLED displays. Same-day service available.</p>
+            <div class="service-price">From $89</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🔋</div>
+            <h3>Battery Draining Fast Fix</h3>
+            <p>Is your phone battery draining fast? iPhone and Samsung battery replacement with genuine parts. Restore full battery life.</p>
+            <div class="service-price">From $59</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">💧</div>
+            <h3>Water Damage Recovery</h3>
+            <p>Phone dropped in water? Professional water damage recovery for iPhone and Android. Free diagnostic. We can often save your device and data.</p>
+            <div class="service-price">From $79</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📶</div>
+            <h3>Phone Won't Charge Fix</h3>
+            <p>Phone not charging? Fix loose or damaged charging ports, Lightning ports, USB-C ports. iPhone and Android charging issues resolved.</p>
+            <div class="service-price">From $49</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🔊</div>
+            <h3>Speaker & Microphone Repair</h3>
+            <p>Can't hear calls? Repair iPhone and Samsung speakers, earpieces, and microphones for crystal clear sound quality.</p>
+            <div class="service-price">From $39</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📷</div>
+            <h3>Camera Not Working Fix</h3>
+            <p>Camera blurry or not working? Fix front and rear cameras on iPhone and Samsung devices. Restore photo and video quality.</p>
+            <div class="service-price">From $69</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+      <div class="container">
+        <h2>Why Choose [Your Company Name]?</h2>
+        <div class="benefits-grid">
+          <div class="benefit">
+            <h3>Expert iPhone & Samsung Technicians</h3>
+            <p>Certified technicians specializing in iPhone 16/15/14, Samsung Galaxy S24/S23, Google Pixel repair. Years of experience with all models.</p>
+          </div>
+          <div class="benefit">
+            <h3>Genuine OEM Parts</h3>
+            <p>We use only genuine OEM parts for iPhone and Samsung repairs. Quality guaranteed with 14-day warranty on all repairs.</p>
+          </div>
+          <div class="benefit">
+            <h3>Same-Day Service Near You</h3>
+            <p>Located in [Your City/Region]. Most repairs done while you wait.</p>
+          </div>
+          <div class="benefit">
+            <h3>Honest Pricing</h3>
+            <p>Transparent pricing with no hidden fees. Free diagnostic for water damage and charging issues. Get a quote before we start.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>iPhone or Samsung Phone Repair?</h2>
+        <p>Cracked screen? Battery draining fast? Phone won't charge? Visit us or get a free quote today.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+          <a href="tel:[your-phone-number]" class="btn btn-secondary">Call Now: [Your Phone Number]</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PARTIAL - DO NOT REMOVE -->
+  <div id="footer-partial"></div>
+
+  <script>
+    // Load header and footer partials
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+
+  <!-- Structured Data - Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "iPhone and Samsung Phone Repair Services",
+    "description": "Expert iPhone 16/15/14, Samsung Galaxy S24/S23, Google Pixel repair. Cracked screen repair, battery replacement, water damage recovery.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "[Your Company Name]",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[Your Street Address]",
+        "addressLocality": "[Your City]",
+        "addressRegion": "[Your State/Province]",
+        "postalCode": "[Your ZIP/Postal Code]",
+        "addressCountry": "[Your Country Code]"
+      },
+      "telephone": "[Your Phone Number]",
+      "url": "https://[yourdomain.com]"
+    },
+    "serviceType": "Smartphone Repair",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "iPhone Screen Repair",
+        "description": "iPhone 16, 15, 14 cracked screen replacement",
+        "price": "89",
+        "priceCurrency": "CAD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Battery Replacement",
+        "description": "iPhone and Samsung battery replacement",
+        "price": "59",
+        "priceCurrency": "CAD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Water Damage Recovery",
+        "description": "Professional water damage repair for all phones",
+        "price": "79",
+        "priceCurrency": "CAD"
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema for Featured Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does iPhone screen repair cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "iPhone screen repair starts from $89. The exact cost depends on your iPhone model (iPhone 16, 15, 14, 13, etc.). We provide free quotes before starting any repair."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you repair Samsung Galaxy S24 and S23 phones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we specialize in Samsung Galaxy S24, S23, S22 repair including cracked screen replacement, battery replacement, and charging port repair. Same-day service available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My phone battery is draining fast, can you fix it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if your phone battery is draining fast, we can replace it with a genuine battery. Battery replacement starts at $59 for most iPhone and Samsung models. Most replacements are completed the same day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you fix a phone that won't charge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we fix phones that won't charge by repairing or replacing damaged charging ports. This includes Lightning ports on iPhones and USB-C ports on Samsung and Android phones. Charging port repair starts at $49."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you repair water damaged phones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer professional water damage recovery for phones dropped in water. We provide free diagnostics to assess the damage. Many water damaged phones can be saved if brought in quickly. Water damage repair starts at $79."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does phone screen repair take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most phone screen repairs are completed within 24-48 hours. For iPhone and Samsung models with parts in stock, we often offer same-day service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is your phone repair shop located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're located at [Your Street Address] in [Your City], [Your State/Province]."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you repair Google Pixel phones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we repair Google Pixel 8, 7, 6, and older models. Services include screen repair, battery replacement, charging port repair, and camera repair for all Google Pixel devices."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

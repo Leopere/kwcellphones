@@ -1,0 +1,93 @@
+<!--
+=======================================================================
+HEADER PARTIAL - MODIFY WITH CARE
+=======================================================================
+This is a partial file that gets included in all pages.
+Any changes made here will be reflected across the entire site.
+Always use this partial for consistent navigation across the site.
+
+IMPORTANT: 
+- You CAN modify this partial when navigation needs to be updated
+- You should NEVER disable the inclusion of this partial in pages
+- All navigation changes should be made here, not in individual pages
+=======================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><!-- TITLE --></title>
+  <meta name="description" content="<!-- DESCRIPTION -->">
+  <meta name="keywords" content="device repair, phone repair, laptop repair, tablet repair, tech repair, smartphone repair, computer repair">
+  
+  <!-- Local fonts -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Matomo Analytics - COMMENTED OUT FOR TEMPLATE -->
+  <!-- 
+  To enable analytics:
+  1. Set up your Matomo instance (self-hosted or cloud)
+  2. Replace the tracker URL and site ID below
+  3. Uncomment this entire section
+  
+  <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+    _paq.push(["setCookieDomain", "*.[yourdomain.com]"]);
+    _paq.push(["setDomains", ["*.[yourdomain.com]"]]);
+    _paq.push(["disableCookies"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//[your-matomo-instance]/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '[your-site-id]']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="//[your-matomo-instance]/matomo.php?idsite=[your-site-id]&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+  <img referrerpolicy="no-referrer-when-downgrade" src="https://[your-matomo-instance]/matomo.php?idsite=[your-site-id]&amp;rec=1" style="border:0" alt="" />
+  -->
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="header" role="banner">
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="logo" aria-label="[Your Company Name] Home">
+          <img src="images/logo-light.svg" alt="[Your Company Name] logo" class="logo-image logo-light" width="224" height="56">
+          <img src="images/logo-dark.svg" alt="[Your Company Name] logo" class="logo-image logo-dark" width="224" height="56">
+          <span class="brand-text"><span class="brand-word brand-gold">[Your</span><span class="brand-word brand-gold">Company</span><span class="brand-word brand-white">Name]</span></span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="sr-only">Menu</span>
+          <span class="menu-bar" aria-hidden="true"></span>
+          <span class="menu-bar" aria-hidden="true"></span>
+          <span class="menu-bar" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li class="dropdown">
+            <button class="nav-link dropdown-toggle" id="nav-services" aria-expanded="false" aria-haspopup="true" aria-controls="services-menu">
+              Services
+              <span class="dropdown-arrow" aria-hidden="true">▼</span>
+            </button>
+            <ul class="dropdown-menu" id="services-menu" role="menu" aria-labelledby="nav-services" aria-hidden="true">
+              <li role="none"><a href="services.html" role="menuitem">All Services</a></li>
+              <li role="none"><a href="phone-repair.html" role="menuitem">Phone Repair</a></li>
+              <li role="none"><a href="laptop-repair.html" role="menuitem">Laptop Repair</a></li>
+              <li role="none"><a href="tablet-repair.html" role="menuitem">Tablet Repair</a></li>
+              <li role="none"><a href="console-repair.html" role="menuitem">Console Repair</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="about.html" class="nav-link" id="nav-about">About Us</a></li> -->
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">

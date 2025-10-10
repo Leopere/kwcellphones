@@ -1,0 +1,364 @@
+<!--
+=======================================================================
+IMPORTANT: THIS SITE USES HTML PARTIALS FOR STANDARDIZATION
+=======================================================================
+- ALWAYS use the JavaScript partial loading system:
+  <div id="header-partial"></div>
+  <div id="footer-partial"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+- NEVER disable or remove the partials inclusion in pages
+- NEVER add navigation code directly to individual pages
+- Partials ensure consistent navigation and footer across the site
+- Any navigation/footer changes should ONLY be made in the partials
+- You CAN and SHOULD modify the partials when updates are needed
+=======================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>PS5 Repair | Xbox Series X, Nintendo Switch Repair</title>
+  <meta name="description" content="Expert PS5, PS4, Xbox Series X/S, Nintendo Switch OLED repair. PS5 overheating, Xbox won't read discs, Joy-Con drift fix. Gaming console repair.">
+  <meta name="keywords" content="PS5 repair, Xbox Series X repair, Nintendo Switch repair, PS5 overheating fix, Xbox disc drive repair, Joy-Con drift repair, PS4 repair, Switch OLED screen repair, gaming console repair near me, PlayStation repair, Xbox repair, console repair">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://[yourdomain.com]/console-repair.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="PS5, Xbox Series X & Nintendo Switch Repair" />
+  <meta property="og:description" content="Expert PS5, Xbox Series X/S, Nintendo Switch OLED repair. PS5 overheating, Xbox won't read discs, Joy-Con drift fix." />
+  <meta property="og:image" content="https://[yourdomain.com]/images/console-repair.webp" />
+  <meta property="og:url" content="https://[yourdomain.com]/console-repair.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Local fonts -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Function to load partials
+    function loadPartial(url, targetId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          // Extract only the body content from the partial
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = data;
+
+          // Find the content between the body tags, excluding the body tags themselves
+          const bodyContent = data.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+
+          if (bodyContent && bodyContent[1]) {
+            // Use the content between body tags
+            document.getElementById(targetId).innerHTML = bodyContent[1].trim();
+          } else {
+            // Fallback to using the entire content
+            document.getElementById(targetId).innerHTML = data;
+          }
+        });
+    }
+  </script>
+</head>
+<body>
+  <!-- HEADER PARTIAL - DO NOT REMOVE -->
+  <div id="header-partial"></div>
+
+  <main id="main-content" role="main">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>PS5, Xbox Series X & Nintendo Switch Repair</h1>
+        <p>Expert PS5, PS4, Xbox Series X/S, Nintendo Switch OLED repair. PS5 overheating? Xbox won't read discs? Joy-Con drift? We fix it. Serving gamers in [Your City/Region].</p>
+      </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="service-overview">
+      <div class="container">
+        <div class="service-intro">
+          <div class="service-image">
+            <picture>
+              <source srcset="images/console-repair.webp" type="image/webp">
+              <img src="images/console-repair.webp" alt="A white PlayStation 5 Pro console (disc edition) standing vertically next to its white DualSense wireless controller, shown against a clean white background. The console features the characteristic black central stripe with subtle ventilation lines." width="600" height="400" loading="lazy">
+            </picture>
+          </div>
+          <div class="service-description">
+            <h2>PS5, PS4, Xbox Series X/S & Nintendo Switch Repair Near You</h2>
+            <p>PS5 overheating? Xbox won't read discs? Joy-Con drift on your Switch? We repair PS5, PS4 Pro, Xbox Series X, Series S, Xbox One, Nintendo Switch OLED, and all gaming consoles. Located in [Your City/Region]. Get back to gaming fast!</p>
+            <div class="service-features">
+              <div class="feature">
+                <h3>🎮 Gaming Experts</h3>
+                <p>Technicians who understand gaming hardware and software</p>
+              </div>
+              <div class="feature">
+                <h3>⚡ Fast Turnaround</h3>
+                <p>Get your console back quickly so you can keep gaming</p>
+              </div>
+              <div class="feature">
+                <h3>🎯 All Platforms</h3>
+                <p>PlayStation, Xbox, Nintendo, and more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="services-offered">
+      <div class="container">
+        <h2>PS5, Xbox & Nintendo Switch Gaming Console Repair Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">💿</div>
+            <h3>Xbox Won't Read Discs / PS5 Disc Drive Repair</h3>
+            <p>Xbox or PlayStation won't accept or read game discs? Fix disc drive, clean laser assembly. PS5, PS4, Xbox Series X disc drive repair.</p>
+            <div class="service-price">From $49</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🎮</div>
+            <h3>Joy-Con Drift & Controller Repair</h3>
+            <p>Nintendo Switch Joy-Con drift fix. PS5 DualSense, Xbox Elite controller repair. Analog sticks, triggers, buttons repaired.</p>
+            <div class="service-price">From $29</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🔌</div>
+            <h3>Console Won't Turn On / Power Issues</h3>
+            <p>PS5 or Xbox won't power on? Fix power supply, charging problems, power brick failures. Get your console working again.</p>
+            <div class="service-price">From $39</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">💽</div>
+            <h3>Game Save & Data Recovery</h3>
+            <p>Lost game saves? Recover data from corrupted PS5, Xbox, Switch hard drives and storage. Save your gaming progress.</p>
+            <div class="service-price">From $79</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🔊</div>
+            <h3>HDMI Port & Display Issues</h3>
+            <p>No video output? Fix PS5, Xbox, Switch HDMI ports, audio jacks. Resolve display and sound problems for gaming.</p>
+            <div class="service-price">From $59</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">💧</div>
+            <h3>PS5 Overheating & Fan Repair</h3>
+            <p>PS5 or Xbox overheating and shutting down? Clean cooling systems, replace fans, fix overheating that interrupts gaming.</p>
+            <div class="service-price">From $69</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supported Consoles -->
+    <section class="supported-consoles">
+      <div class="container">
+        <h2>Gaming Consoles We Repair</h2>
+        <div class="consoles-grid">
+          <div class="console-brand">
+            <h3>PlayStation</h3>
+            <ul>
+              <li>PS5</li>
+              <li>PS4</li>
+              <li>PS4 Pro</li>
+              <li>PS4 Slim</li>
+              <li>PS3</li>
+            </ul>
+          </div>
+          <div class="console-brand">
+            <h3>Xbox</h3>
+            <ul>
+              <li>Xbox Series X</li>
+              <li>Xbox Series S</li>
+              <li>Xbox One</li>
+              <li>Xbox One X</li>
+              <li>Xbox 360</li>
+            </ul>
+          </div>
+          <div class="console-brand">
+            <h3>Nintendo</h3>
+            <ul>
+              <li>Nintendo Switch</li>
+              <li>Nintendo Switch OLED</li>
+              <li>Nintendo Switch Lite</li>
+              <li>Nintendo 3DS</li>
+              <li>Nintendo Wii U</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+      <div class="container">
+        <h2>Why Choose [Your Company Name] for PS5 & Console Repair?</h2>
+        <div class="benefits-grid">
+          <div class="benefit">
+            <h3>PS5, Xbox & Nintendo Specialists</h3>
+            <p>Expert technicians who repair PS5, PS4, Xbox Series X/S, Nintendo Switch. We understand gaming hardware and get you back to gaming fast.</p>
+          </div>
+          <div class="benefit">
+            <h3>Game Save Data Protection</h3>
+            <p>Protect your progress. We preserve saved games and gaming data during PS5, Xbox, and Switch repairs.</p>
+          </div>
+          <div class="benefit">
+            <h3>14-Day Warranty on Gaming Repairs</h3>
+            <p>All PS5, Xbox, and Nintendo Switch repairs backed by 14-day warranty. Game with confidence.</p>
+          </div>
+          <div class="benefit">
+            <h3>Gamers Serving Gamers</h3>
+            <p>Affordable prices for PS5 overheating, Joy-Con drift, disc drive fixes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>PS5, Xbox or Nintendo Switch Repair?</h2>
+        <p>PS5 overheating? Xbox won't read discs? Joy-Con drift? Visit us or get a quote for gaming console repair.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary">Get Repair Quote</a>
+          <a href="tel:[your-phone-number]" class="btn btn-secondary">Call Now: [Your Phone Number]</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PARTIAL - DO NOT REMOVE -->
+  <div id="footer-partial"></div>
+
+  <script>
+    // Load header and footer partials
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+
+  <!-- Structured Data - Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "PS5, Xbox and Nintendo Switch Repair Services",
+    "description": "Expert PS5, Xbox Series X/S, Nintendo Switch repair. PS5 overheating, Xbox disc drive, Joy-Con drift fixes.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "[Your Company Name]",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[Your Street Address]",
+        "addressLocality": "[Your City]",
+        "addressRegion": "[Your State/Province]",
+        "postalCode": "[Your ZIP/Postal Code]",
+        "addressCountry": "[Your Country Code]"
+      },
+      "telephone": "[Your Phone Number]",
+      "url": "https://[yourdomain.com]"
+    },
+    "serviceType": "Video Game Console Repair",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "PS5 and Xbox Disc Drive Repair",
+        "description": "Fix Xbox and PlayStation disc drive issues",
+        "price": "49",
+        "priceCurrency": "CAD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Joy-Con Drift and Controller Repair",
+        "description": "Nintendo Switch Joy-Con drift fix and controller repair",
+        "price": "29",
+        "priceCurrency": "CAD"
+      },
+      {
+        "@type": "Offer",
+        "name": "PS5 Overheating Repair",
+        "description": "Fix PS5 and Xbox overheating problems",
+        "price": "69",
+        "priceCurrency": "CAD"
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema for Featured Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does PS5 repair cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PS5 repair varies by issue. PS5 disc drive repair starts at $49, overheating fix at $69, HDMI port repair at $59. We provide free diagnostics to determine the exact repair needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you fix Joy-Con drift on Nintendo Switch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we fix Joy-Con drift on Nintendo Switch and Switch OLED. Joy-Con drift repair starts at $29. We repair or replace analog sticks to eliminate the drifting issue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My Xbox won't read discs, can you fix it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we fix Xbox Series X, Series S, and Xbox One disc drive issues. Xbox disc drive repair starts at $49. We clean laser assemblies and repair or replace faulty disc drives."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my PS5 overheating and shutting down?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PS5 overheating is often caused by dust buildup in cooling fans or thermal paste degradation. We clean cooling systems, replace fans, and reapply thermal paste. PS5 overheating repair starts at $69."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you repair Xbox Series X and Series S?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we repair Xbox Series X and Series S including disc drive issues, overheating, HDMI port problems, and power issues. Same-day service available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you recover game saves from broken consoles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer game save and data recovery from PS5, Xbox, and Nintendo Switch consoles with damaged hard drives or corrupted storage. Data recovery starts at $79."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

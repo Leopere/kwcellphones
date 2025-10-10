@@ -1,0 +1,274 @@
+<!--
+=======================================================================
+IMPORTANT: THIS SITE USES HTML PARTIALS FOR STANDARDIZATION
+=======================================================================
+- ALWAYS use the JavaScript partial loading system:
+  <div id="header-partial"></div>
+  <div id="footer-partial"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+- NEVER disable or remove the partials inclusion in pages
+- NEVER add navigation code directly to individual pages
+- Partials ensure consistent navigation and footer across the site
+- Any navigation/footer changes should ONLY be made in the partials
+- You CAN and SHOULD modify the partials when updates are needed
+=======================================================================
+TODO: SELF-HOST ALL ASSETS INTERNALLY FOR SPEED - NO EXTERNAL CDNs
+=======================================================================
+- Matomo analytics currently loads from external metrics.nixc.us
+- Forms submit to external forms.techdevicerepair.online subdomain
+- Google Maps directions link is external
+- Keep all assets local for maximum performance and privacy
+=======================================================================
+
+GIT WORKFLOW - CRITICAL FOR ALL CHANGES
+=======================================================================
+⚠️  BEFORE MAKING ANY CHANGES: git pull origin main
+⚠️  AFTER MAKING CHANGES: git add . && git commit -m "msg" && git push origin main
+⚠️  NEVER work on outdated code or forget to push changes
+=======================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Share Your Experience - [Your Company Name]</title>
+  <meta name="description" content="Help us improve by sharing your experience with [Your Company Name]. Your feedback helps us provide better service for everyone.">
+  <meta name="keywords" content="feedback tech repair, review device repair, customer experience">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://[yourdomain.com]/feedback.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Share Your Experience - [Your Company Name]" />
+  <meta property="og:description" content="Help us improve by sharing your experience with [Your Company Name]. Your feedback helps us provide better service for everyone." />
+  <meta property="og:image" content="https://[yourdomain.com]/images/logo.svg" />
+  <meta property="og:url" content="https://[yourdomain.com]/feedback.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Local fonts -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Function to load partials
+    function loadPartial(url, targetId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          // Extract only the body content from the partial
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = data;
+
+          // Find the content between the body tags, excluding the body tags themselves
+          const bodyContent = data.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+
+          if (bodyContent && bodyContent[1]) {
+            // Use the content between body tags
+            document.getElementById(targetId).innerHTML = bodyContent[1].trim();
+          } else {
+            // Fallback to using the entire content
+            document.getElementById(targetId).innerHTML = data;
+          }
+        });
+    }
+  </script>
+</head>
+<body>
+  <!-- HEADER PARTIAL - DO NOT REMOVE -->
+  <div id="header-partial"></div>
+
+  <main id="main-content" role="main">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Share Your Experience</h1>
+        <p>Your feedback helps us provide the best possible service to all our customers. Thank you for helping us improve!</p>
+      </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-form-container">
+            <h2>How was your experience with us?</h2>
+            <p>We value your honest feedback. Please rate your overall experience with our repair services.</p>
+
+            <div id="feedback-container">
+              <!-- Rating Section -->
+              <div id="rating-section" class="rating-section">
+                <h3>Rate Your Experience</h3>
+                <div class="rating-stars" id="rating-stars">
+                  <span class="star" data-rating="1" role="button" tabindex="0" aria-label="1 star">★</span>
+                  <span class="star" data-rating="2" role="button" tabindex="0" aria-label="2 stars">★</span>
+                  <span class="star" data-rating="3" role="button" tabindex="0" aria-label="3 stars">★</span>
+                  <span class="star" data-rating="4" role="button" tabindex="0" aria-label="4 stars">★</span>
+                  <span class="star" data-rating="5" role="button" tabindex="0" aria-label="5 stars">★</span>
+                </div>
+                <div class="rating-labels">
+                  <span>Poor</span>
+                  <span>Excellent</span>
+                </div>
+                <div id="rating-error" class="form-message error" style="display: none;"></div>
+              </div>
+
+              <!-- Positive Feedback Section -->
+              <div id="positive-feedback" class="feedback-followup" style="display: none;">
+                <div class="success-message">
+                  <h3>Thank you for the great feedback! 🎉</h3>
+                  <p>We're thrilled you had a positive experience with [Your Company Name]. Your support means everything to us.</p>
+                  <p>Would you be willing to share your experience on Google? A 5-star review would help other customers find our services and support local businesses like ours.</p>
+
+                  <div class="google-review-section">
+                    <a href="https://search.google.com/local/reviews?placeid=ChIJw4GD_t30K4gR217LOmqi-s8" target="_blank" rel="noopener noreferrer" class="btn btn-primary google-review-btn" id="google-review-btn">
+                      <span class="btn-icon">⭐</span>
+                      I Would Happily Review You on Google
+                    </a>
+                    <p class="review-note">This will open Google in a new tab where you can leave your review.</p>
+                  </div>
+
+                  <div class="skip-review">
+                    <button type="button" class="btn btn-secondary" id="skip-review-btn">No thanks, just submit my rating</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Negative Feedback Section -->
+              <div id="negative-feedback" class="feedback-followup" style="display: none;">
+                <div class="improvement-message">
+                  <h3>We're sorry to hear that 😔</h3>
+                  <p>We truly appreciate you taking the time to share your feedback. Your input helps us improve our services.</p>
+                  <p>Please tell us more about your experience so we can learn and do better:</p>
+
+                  <!-- Form Endpoint - COMMENTED OUT FOR TEMPLATE -->
+                  <!-- 
+                  To enable form submission:
+                  1. Set up your form handler endpoint (e.g., forms.[yourdomain.com]/api/submit)
+                  2. Replace the action URL below with your endpoint
+                  3. Uncomment the action attribute
+                  -->
+                  <form id="improvement-form" class="contact-form" action="https://[your-form-endpoint]/api/submit" method="POST">
+                    <input type="hidden" name="form_id" value="tech_device_repair_feedback">
+                    <input type="hidden" name="rating" id="feedback-rating" value="">
+                    <input type="hidden" name="feedback_type" value="improvement_needed">
+
+                    <div class="form-group">
+                      <label for="feedback-name">Your Name (Optional)</label>
+                      <input type="text" id="feedback-name" name="name" placeholder="How you'd like us to address you">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="feedback-email">Email (Optional)</label>
+                      <input type="email" id="feedback-email" name="email" placeholder="your.email@example.com">
+                      <span class="form-hint">We'll only use this to follow up if you provide it</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="improvement-details">How can we improve? <span class="required" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                      <textarea id="improvement-details" name="message" rows="5" required aria-required="true" placeholder="Please share specific details about your experience and any suggestions for improvement..."></textarea>
+                    </div>
+
+                    <div id="improvement-form-message" class="form-message" role="status" aria-live="polite"></div>
+
+                    <!-- Honeypot field -->
+                    <div class="form-group" style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;" aria-hidden="true">
+                      <label for="feedback-website">Website (optional)</label>
+                      <input type="url" id="feedback-website" name="website" tabindex="-1" autocomplete="off" placeholder="https://">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full" id="improvement-submit-btn">
+                      Submit Feedback
+                    </button>
+                  </form>
+
+                  <div class="follow-up-note">
+                    <p><strong>Note:</strong> We may reach out to you directly to better understand your experience and see how we can improve our services.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-container">
+            <h2>Why Your Feedback Matters</h2>
+            <p>Customer feedback is essential for us to provide the best possible repair services. Here's how your input helps:</p>
+
+            <div class="feedback-benefits">
+              <div class="benefit-item">
+                <div class="benefit-icon">🎯</div>
+                <div>
+                  <h3>Service Improvement</h3>
+                  <p>Your suggestions help us identify areas where we can do better and provide more reliable repairs.</p>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">⭐</div>
+                <div>
+                  <h3>Help Others</h3>
+                  <p>Positive reviews on Google help other customers find trustworthy repair services.</p>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">🏆</div>
+                <div>
+                  <h3>Quality Standards</h3>
+                  <p>Your feedback ensures we maintain high standards and continue to be the go-to repair shop in the community.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="feedback-privacy">
+              <h3>Privacy & Trust</h3>
+              <p>Your feedback is completely confidential. We never share personal information without your explicit permission. Contact details are optional and only used for follow-up when you provide them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PARTIAL - DO NOT REMOVE -->
+  <div id="footer-partial"></div>
+
+  <script>
+    // Load header and footer partials
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Share Your Experience - [Your Company Name]",
+    "description": "Help us improve by sharing your experience with [Your Company Name]. Your feedback helps us provide better service for everyone.",
+    "url": "https://[yourdomain.com]/feedback.html",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "[Your Company Name]",
+      "description": "Professional device repair services for smartphones, laptops, tablets, and gaming consoles.",
+      "url": "https://[yourdomain.com]"
+    }
+  }
+  </script>
+
+  <script src="js/script.js"></script>
+  <script src="js/feedback.js"></script>
+</body>
+</html>

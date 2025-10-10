@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="2400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Inter', Arial, sans-serif; font-size: 24px; font-weight: 700; fill: #1f2937; }
+      .subtitle { font-family: 'Inter', Arial, sans-serif; font-size: 16px; font-weight: 600; fill: #4b5563; }
+      .color-label { font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 500; fill: #374151; }
+      .color-hex { font-family: 'Monaco', 'Courier New', monospace; font-size: 12px; fill: #6b7280; }
+      .section-title { font-family: 'Inter', Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #1f2937; }
+      .card { fill: white; stroke: #e5e7eb; stroke-width: 1; }
+      .dark-card { fill: #1f2937; stroke: #374151; stroke-width: 1; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="2400" fill="#f9fafb"/>
+  
+  <!-- Main Title -->
+  <text x="600" y="50" text-anchor="middle" class="title">Tech Device Repair - Color Palette Guide</text>
+  <text x="600" y="80" text-anchor="middle" class="subtitle">Based on Gold (#D4AF37)</text>
+  
+  <!-- 1. Current Brand Colors -->
+  <rect x="50" y="110" width="1100" height="180" class="card" rx="8"/>
+  <text x="70" y="140" class="section-title">1. Current Brand Colors</text>
+  
+  <rect x="90" y="160" width="120" height="100" fill="#D4AF37" rx="4"/>
+  <text x="150" y="270" text-anchor="middle" class="color-label">Primary Gold</text>
+  <text x="150" y="285" text-anchor="middle" class="color-hex">#D4AF37</text>
+  
+  <rect x="240" y="160" width="120" height="100" fill="#B8860B" rx="4"/>
+  <text x="300" y="270" text-anchor="middle" class="color-label">Dark Gold</text>
+  <text x="300" y="285" text-anchor="middle" class="color-hex">#B8860B</text>
+  
+  <rect x="390" y="160" width="120" height="100" fill="#9A7209" rx="4"/>
+  <text x="450" y="270" text-anchor="middle" class="color-label">Gold Hover</text>
+  <text x="450" y="285" text-anchor="middle" class="color-hex">#9A7209</text>
+  
+  <rect x="540" y="160" width="120" height="100" fill="#000000" rx="4"/>
+  <text x="600" y="270" text-anchor="middle" class="color-label">Black</text>
+  <text x="600" y="285" text-anchor="middle" class="color-hex">#000000</text>
+  
+  <rect x="690" y="160" width="120" height="100" fill="#FFFFFF" stroke="#e5e7eb" stroke-width="2" rx="4"/>
+  <text x="750" y="270" text-anchor="middle" class="color-label">White</text>
+  <text x="750" y="285" text-anchor="middle" class="color-hex">#FFFFFF</text>
+  
+  <!-- 2. Complementary Palette -->
+  <rect x="50" y="320" width="1100" height="180" class="card" rx="8"/>
+  <text x="70" y="350" class="section-title">2. Complementary Palette</text>
+  <text x="70" y="370" class="subtitle" style="font-size: 13px;">Opposite on color wheel - creates strong contrast</text>
+  
+  <rect x="90" y="380" width="120" height="100" fill="#D4AF37" rx="4"/>
+  <text x="150" y="490" text-anchor="middle" class="color-label">Gold</text>
+  <text x="150" y="505" text-anchor="middle" class="color-hex">#D4AF37</text>
+  
+  <rect x="240" y="380" width="120" height="100" fill="#374FD4" rx="4"/>
+  <text x="300" y="490" text-anchor="middle" class="color-label">Royal Blue</text>
+  <text x="300" y="505" text-anchor="middle" class="color-hex">#374FD4</text>
+  
+  <rect x="390" y="380" width="120" height="100" fill="#2A3AA0" rx="4"/>
+  <text x="450" y="490" text-anchor="middle" class="color-label">Deep Blue</text>
+  <text x="450" y="505" text-anchor="middle" class="color-hex">#2A3AA0</text>
+  
+  <rect x="540" y="380" width="120" height="100" fill="#5C6FE6" rx="4"/>
+  <text x="600" y="490" text-anchor="middle" class="color-label">Light Blue</text>
+  <text x="600" y="505" text-anchor="middle" class="color-hex">#5C6FE6</text>
+  
+  <!-- 3. Split Complementary Palette -->
+  <rect x="50" y="530" width="1100" height="180" class="card" rx="8"/>
+  <text x="70" y="560" class="section-title">3. Split Complementary Palette</text>
+  <text x="70" y="580" class="subtitle" style="font-size: 13px;">Base color + two colors adjacent to complement - more versatile</text>
+  
+  <rect x="90" y="590" width="120" height="100" fill="#D4AF37" rx="4"/>
+  <text x="150" y="700" text-anchor="middle" class="color-label">Gold</text>
+  <text x="150" y="715" text-anchor="middle" class="color-hex">#D4AF37</text>
+  
+  <rect x="240" y="590" width="120" height="100" fill="#3788D4" rx="4"/>
+  <text x="300" y="700" text-anchor="middle" class="color-label">Azure Blue</text>
+  <text x="300" y="715" text-anchor="middle" class="color-hex">#3788D4</text>
+  
+  <rect x="390" y="590" width="120" height="100" fill="#6E37D4" rx="4"/>
+  <text x="450" y="700" text-anchor="middle" class="color-label">Purple</text>
+  <text x="450" y="715" text-anchor="middle" class="color-hex">#6E37D4</text>
+  
+  <rect x="540" y="590" width="120" height="100" fill="#84B8E6" rx="4"/>
+  <text x="600" y="700" text-anchor="middle" class="color-label">Sky Blue</text>
+  <text x="600" y="715" text-anchor="middle" class="color-hex">#84B8E6</text>
+  
+  <rect x="690" y="590" width="120" height="100" fill="#9E6EE6" rx="4"/>
+  <text x="750" y="700" text-anchor="middle" class="color-label">Light Purple</text>
+  <text x="750" y="715" text-anchor="middle" class="color-hex">#9E6EE6</text>
+  
+  <!-- 4. Triadic Palette -->
+  <rect x="50" y="740" width="1100" height="180" class="card" rx="8"/>
+  <text x="70" y="770" class="section-title">4. Triadic Palette</text>
+  <text x="70" y="790" class="subtitle" style="font-size: 13px;">Three colors evenly spaced on color wheel - vibrant and balanced</text>
+  
+  <rect x="90" y="800" width="120" height="100" fill="#D4AF37" rx="4"/>
+  <text x="150" y="910" text-anchor="middle" class="color-label">Gold</text>
+  <text x="150" y="925" text-anchor="middle" class="color-hex">#D4AF37</text>
+  
+  <rect x="240" y="800" width="120" height="100" fill="#37D486" rx="4"/>
+  <text x="300" y="910" text-anchor="middle" class="color-label">Emerald</text>
+  <text x="300" y="925" text-anchor="middle" class="color-hex">#37D486</text>
+  
+  <rect x="390" y="800" width="120" height="100" fill="#8637D4" rx="4"/>
+  <text x="450" y="910" text-anchor="middle" class="color-label">Violet</text>
+  <text x="450" y="925" text-anchor="middle" class="color-hex">#8637D4</text>
+  
+  <rect x="540" y="800" width="120" height="100" fill="#6EE6B8" rx="4"/>
+  <text x="600" y="910" text-anchor="middle" class="color-label">Mint</text>
+  <text x="600" y="925" text-anchor="middle" class="color-hex">#6EE6B8</text>
+  
+  <rect x="690" y="800" width="120" height="100" fill="#B86EE6" rx="4"/>
+  <text x="750" y="910" text-anchor="middle" class="color-label">Lavender</text>
+  <text x="750" y="925" text-anchor="middle" class="color-hex">#B86EE6</text>
+  
+  <!-- 5. Analogous Palette -->
+  <rect x="50" y="950" width="1100" height="180" class="card" rx="8"/>
+  <text x="70" y="980" class="section-title">5. Analogous Palette</text>
+  <text x="70" y="1000" class="subtitle" style="font-size: 13px;">Adjacent colors on wheel - harmonious and serene</text>
+  
+  <rect x="90" y="1010" width="120" height="100" fill="#D48637" rx="4"/>
+  <text x="150" y="1120" text-anchor="middle" class="color-label">Orange Gold</text>
+  <text x="150" y="1135" text-anchor="middle" class="color-hex">#D48637</text>
+  
+  <rect x="240" y="1010" width="120" height="100" fill="#D4AF37" rx="4"/>
+  <text x="300" y="1120" text-anchor="middle" class="color-label">Gold</text>
+  <text x="300" y="1135" text-anchor="middle" class="color-hex">#D4AF37</text>
+  
+  <rect x="390" y="1010" width="120" height="100" fill="#C9D437" rx="4"/>
+  <text x="450" y="1120" text-anchor="middle" class="color-label">Yellow Green</text>
+  <text x="450" y="1135" text-anchor="middle" class="color-hex">#C9D437</text>
+  
+  <rect x="540" y="1010" width="120" height="100" fill="#E6A84D" rx="4"/>
+  <text x="600" y="1120" text-anchor="middle" class="color-label">Amber</text>
+  <text x="600" y="1135" text-anchor="middle" class="color-hex">#E6A84D</text>
+  
+  <rect x="690" y="1010" width="120" height="100" fill="#DDE66E" rx="4"/>
+  <text x="750" y="1120" text-anchor="middle" class="color-label">Pale Yellow</text>
+  <text x="750" y="1135" text-anchor="middle" class="color-hex">#DDE66E</text>
+  
+  <!-- 6. Tetradic (Square) Palette -->
+  <rect x="50" y="1160" width="1100" height="180" class="card" rx="8"/>
+  <text x="70" y="1190" class="section-title">6. Tetradic (Square) Palette</text>
+  <text x="70" y="1210" class="subtitle" style="font-size: 13px;">Four colors evenly spaced - rich and dynamic</text>
+  
+  <rect x="90" y="1220" width="120" height="100" fill="#D4AF37" rx="4"/>
+  <text x="150" y="1330" text-anchor="middle" class="color-label">Gold</text>
+  <text x="150" y="1345" text-anchor="middle" class="color-hex">#D4AF37</text>
+  
+  <rect x="240" y="1220" width="120" height="100" fill="#AFD437" rx="4"/>
+  <text x="300" y="1330" text-anchor="middle" class="color-label">Lime</text>
+  <text x="300" y="1345" text-anchor="middle" class="color-hex">#AFD437</text>
+  
+  <rect x="390" y="1220" width="120" height="100" fill="#5C37D4" rx="4"/>
+  <text x="450" y="1330" text-anchor="middle" class="color-label">Blue Purple</text>
+  <text x="450" y="1345" text-anchor="middle" class="color-hex">#5C37D4</text>
+  
+  <rect x="540" y="1220" width="120" height="100" fill="#D4375C" rx="4"/>
+  <text x="600" y="1330" text-anchor="middle" class="color-label">Rose</text>
+  <text x="600" y="1345" text-anchor="middle" class="color-hex">#D4375C</text>
+  
+  <!-- 7. Monochromatic Palette -->
+  <rect x="50" y="1370" width="1100" height="180" class="card" rx="8"/>
+  <text x="70" y="1400" class="section-title">7. Monochromatic Palette</text>
+  <text x="70" y="1420" class="subtitle" style="font-size: 13px;">Variations of gold - elegant and cohesive</text>
+  
+  <rect x="90" y="1430" width="100" height="100" fill="#F5E8C7" rx="4"/>
+  <text x="140" y="1540" text-anchor="middle" class="color-label">Pale Gold</text>
+  <text x="140" y="1555" text-anchor="middle" class="color-hex">#F5E8C7</text>
+  
+  <rect x="210" y="1430" width="100" height="100" fill="#E6D089" rx="4"/>
+  <text x="260" y="1540" text-anchor="middle" class="color-label">Light Gold</text>
+  <text x="260" y="1555" text-anchor="middle" class="color-hex">#E6D089</text>
+  
+  <rect x="330" y="1430" width="100" height="100" fill="#D4AF37" rx="4"/>
+  <text x="380" y="1540" text-anchor="middle" class="color-label">Gold</text>
+  <text x="380" y="1555" text-anchor="middle" class="color-hex">#D4AF37</text>
+  
+  <rect x="450" y="1430" width="100" height="100" fill="#B8860B" rx="4"/>
+  <text x="500" y="1540" text-anchor="middle" class="color-label">Dark Gold</text>
+  <text x="500" y="1555" text-anchor="middle" class="color-hex">#B8860B</text>
+  
+  <rect x="570" y="1430" width="100" height="100" fill="#9A7209" rx="4"/>
+  <text x="620" y="1540" text-anchor="middle" class="color-label">Deep Gold</text>
+  <text x="620" y="1555" text-anchor="middle" class="color-hex">#9A7209</text>
+  
+  <rect x="690" y="1430" width="100" height="100" fill="#6E5207" rx="4"/>
+  <text x="740" y="1540" text-anchor="middle" class="color-label">Bronze</text>
+  <text x="740" y="1555" text-anchor="middle" class="color-hex">#6E5207</text>
+  
+  <rect x="810" y="1430" width="100" height="100" fill="#4A3605" rx="4"/>
+  <text x="860" y="1540" text-anchor="middle" class="color-label">Dark Bronze</text>
+  <text x="860" y="1555" text-anchor="middle" class="color-hex">#4A3605</text>
+  
+  <!-- 8. Dark Mode Palette -->
+  <rect x="50" y="1580" width="1100" height="280" class="dark-card" rx="8"/>
+  <text x="70" y="1610" class="section-title" fill="#f9fafb">8. Dark Mode Color Palette</text>
+  <text x="70" y="1630" class="subtitle" fill="#d1d5db" style="font-size: 13px;">Optimized colors for dark backgrounds</text>
+  
+  <!-- Dark Mode - Backgrounds -->
+  <text x="90" y="1660" class="color-label" fill="#e5e7eb">Backgrounds:</text>
+  
+  <rect x="90" y="1670" width="100" height="80" fill="#0A0A0A" rx="4" stroke="#374151" stroke-width="1"/>
+  <text x="140" y="1760" text-anchor="middle" class="color-label" fill="#e5e7eb">Black</text>
+  <text x="140" y="1775" text-anchor="middle" class="color-hex" fill="#9ca3af">#0A0A0A</text>
+  
+  <rect x="210" y="1670" width="100" height="80" fill="#111827" rx="4"/>
+  <text x="260" y="1760" text-anchor="middle" class="color-label" fill="#e5e7eb">Dark Gray</text>
+  <text x="260" y="1775" text-anchor="middle" class="color-hex" fill="#9ca3af">#111827</text>
+  
+  <rect x="330" y="1670" width="100" height="80" fill="#1F2937" rx="4"/>
+  <text x="380" y="1760" text-anchor="middle" class="color-label" fill="#e5e7eb">Gray</text>
+  <text x="380" y="1775" text-anchor="middle" class="color-hex" fill="#9ca3af">#1F2937</text>
+  
+  <rect x="450" y="1670" width="100" height="80" fill="#374151" rx="4"/>
+  <text x="500" y="1760" text-anchor="middle" class="color-label" fill="#e5e7eb">Light Gray</text>
+  <text x="500" y="1775" text-anchor="middle" class="color-hex" fill="#9ca3af">#374151</text>
+  
+  <!-- Dark Mode - Gold Accents -->
+  <text x="600" y="1660" class="color-label" fill="#e5e7eb">Gold Accents:</text>
+  
+  <rect x="600" y="1670" width="100" height="80" fill="#E6C96F" rx="4"/>
+  <text x="650" y="1760" text-anchor="middle" class="color-label" fill="#e5e7eb">Bright Gold</text>
+  <text x="650" y="1775" text-anchor="middle" class="color-hex" fill="#9ca3af">#E6C96F</text>
+  
+  <rect x="720" y="1670" width="100" height="80" fill="#D4AF37" rx="4"/>
+  <text x="770" y="1760" text-anchor="middle" class="color-label" fill="#e5e7eb">Gold</text>
+  <text x="770" y="1775" text-anchor="middle" class="color-hex" fill="#9ca3af">#D4AF37</text>
+  
+  <rect x="840" y="1670" width="100" height="80" fill="#B8860B" rx="4"/>
+  <text x="890" y="1760" text-anchor="middle" class="color-label" fill="#e5e7eb">Muted Gold</text>
+  <text x="890" y="1775" text-anchor="middle" class="color-hex" fill="#9ca3af">#B8860B</text>
+  
+  <rect x="960" y="1670" width="100" height="80" fill="#F5E8C7" rx="4"/>
+  <text x="1010" y="1760" text-anchor="middle" class="color-label" fill="#374151">Pale Gold</text>
+  <text x="1010" y="1775" text-anchor="middle" class="color-hex" fill="#6b7280">#F5E8C7</text>
+  
+  <!-- Dark Mode - Text Colors -->
+  <text x="90" y="1800" class="color-label" fill="#e5e7eb">Text Colors:</text>
+  
+  <rect x="90" y="1810" width="100" height="30" fill="#F9FAFB" rx="4"/>
+  <text x="140" y="1850" text-anchor="middle" class="color-label" fill="#e5e7eb">Primary</text>
+  <text x="140" y="1865" text-anchor="middle" class="color-hex" fill="#9ca3af">#F9FAFB</text>
+  
+  <rect x="210" y="1810" width="100" height="30" fill="#E5E7EB" rx="4"/>
+  <text x="260" y="1850" text-anchor="middle" class="color-label" fill="#e5e7eb">Secondary</text>
+  <text x="260" y="1865" text-anchor="middle" class="color-hex" fill="#9ca3af">#E5E7EB</text>
+  
+  <rect x="330" y="1810" width="100" height="30" fill="#9CA3AF" rx="4"/>
+  <text x="380" y="1850" text-anchor="middle" class="color-label" fill="#e5e7eb">Muted</text>
+  <text x="380" y="1865" text-anchor="middle" class="color-hex" fill="#9ca3af">#9CA3AF</text>
+  
+  <rect x="450" y="1810" width="100" height="30" fill="#6B7280" rx="4"/>
+  <text x="500" y="1850" text-anchor="middle" class="color-label" fill="#e5e7eb">Disabled</text>
+  <text x="500" y="1865" text-anchor="middle" class="color-hex" fill="#9ca3af">#6B7280</text>
+  
+  <!-- Dark Mode - Supporting Colors -->
+  <text x="600" y="1800" class="color-label" fill="#e5e7eb">Supporting:</text>
+  
+  <rect x="600" y="1810" width="100" height="30" fill="#10B981" rx="4"/>
+  <text x="650" y="1850" text-anchor="middle" class="color-label" fill="#e5e7eb">Success</text>
+  <text x="650" y="1865" text-anchor="middle" class="color-hex" fill="#9ca3af">#10B981</text>
+  
+  <rect x="720" y="1810" width="100" height="30" fill="#EF4444" rx="4"/>
+  <text x="770" y="1850" text-anchor="middle" class="color-label" fill="#e5e7eb">Error</text>
+  <text x="770" y="1865" text-anchor="middle" class="color-hex" fill="#9ca3af">#EF4444</text>
+  
+  <rect x="840" y="1810" width="100" height="30" fill="#F59E0B" rx="4"/>
+  <text x="890" y="1850" text-anchor="middle" class="color-label" fill="#e5e7eb">Warning</text>
+  <text x="890" y="1865" text-anchor="middle" class="color-hex" fill="#9ca3af">#F59E0B</text>
+  
+  <rect x="960" y="1810" width="100" height="30" fill="#3B82F6" rx="4"/>
+  <text x="1010" y="1850" text-anchor="middle" class="color-label" fill="#e5e7eb">Info</text>
+  <text x="1010" y="1865" text-anchor="middle" class="color-hex" fill="#9ca3af">#3B82F6</text>
+  
+  <!-- Recommendations Section -->
+  <rect x="50" y="1900" width="1100" height="450" class="card" rx="8"/>
+  <text x="70" y="1930" class="section-title">Recommendations &amp; Usage Guidelines</text>
+  
+  <text x="90" y="1965" class="color-label" fill="#1f2937">Best Palette Choices:</text>
+  <text x="90" y="1990" class="color-hex" style="font-size: 14px; fill: #4b5563;">
+    • Monochromatic: Most elegant and professional for your brand
+  </text>
+  <text x="90" y="2010" class="color-hex" style="font-size: 14px; fill: #4b5563;">
+    • Split Complementary: Great balance between contrast and harmony (blue/purple accents)
+  </text>
+  <text x="90" y="2030" class="color-hex" style="font-size: 14px; fill: #4b5563;">
+    • Analogous: Warm and inviting (orange-gold-yellow spectrum)
+  </text>
+  
+  <text x="90" y="2065" class="color-label" fill="#1f2937">Dark Mode Implementation:</text>
+  <text x="90" y="2090" class="color-hex" style="font-size: 14px; fill: #4b5563;">
+    • Use #0A0A0A or #111827 as primary background
+  </text>
+  <text x="90" y="2110" class="color-hex" style="font-size: 14px; fill: #4b5563;">
+    • Brighten gold to #E6C96F for better visibility on dark backgrounds
+  </text>
+  <text x="90" y="2130" class="color-hex" style="font-size: 14px; fill: #4b5563;">
+    • Use #F9FAFB for primary text, #E5E7EB for secondary text
+  </text>
+  <text x="90" y="2150" class="color-hex" style="font-size: 14px; fill: #4b5563;">
+    • Maintain current success/error/warning colors (already optimized)
+  </text>
+  
+  <text x="90" y="2185" class="color-label" fill="#1f2937">CSS Variables for Dark Mode:</text>
+  <rect x="90" y="2195" width="1000" height="135" fill="#1f2937" rx="4"/>
+  <text x="110" y="2220" class="color-hex" style="font-size: 13px; fill: #10b981;">@media</text>
+  <text x="170" y="2220" class="color-hex" style="font-size: 13px; fill: #f9fafb;"> (prefers-color-scheme: dark) {</text>
+  <text x="130" y="2240" class="color-hex" style="font-size: 13px; fill: #f9fafb;">  :root {</text>
+  <text x="150" y="2260" class="color-hex" style="font-size: 13px; fill: #d4af37;">    --primary:</text>
+  <text x="260" y="2260" class="color-hex" style="font-size: 13px; fill: #e6c96f;"> #E6C96F</text>
+  <text x="350" y="2260" class="color-hex" style="font-size: 13px; fill: #6b7280;">/* Brighter gold */</text>
+  <text x="150" y="2280" class="color-hex" style="font-size: 13px; fill: #d4af37;">    --dark:</text>
+  <text x="260" y="2280" class="color-hex" style="font-size: 13px; fill: #e6c96f;"> #0A0A0A</text>
+  <text x="350" y="2280" class="color-hex" style="font-size: 13px; fill: #6b7280;">/* True black */</text>
+  <text x="150" y="2300" class="color-hex" style="font-size: 13px; fill: #d4af37;">    --white:</text>
+  <text x="260" y="2300" class="color-hex" style="font-size: 13px; fill: #e6c96f;"> #F9FAFB</text>
+  <text x="350" y="2300" class="color-hex" style="font-size: 13px; fill: #6b7280;">/* Off-white for text */</text>
+  <text x="130" y="2320" class="color-hex" style="font-size: 13px; fill: #f9fafb;">  }</text>
+  <text x="110" y="2340" class="color-hex" style="font-size: 13px; fill: #f9fafb;">}</text>
+  
+  <!-- Footer -->
+  <text x="600" y="2380" text-anchor="middle" class="color-hex" style="font-size: 12px;">
+    Generated for Tech Device Repair - October 2025
+  </text>
+</svg>
+
+

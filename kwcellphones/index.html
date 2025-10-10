@@ -1,0 +1,353 @@
+<!--
+=======================================================================
+IMPORTANT: THIS SITE USES HTML PARTIALS FOR STANDARDIZATION
+=======================================================================
+- ALWAYS use the JavaScript partial loading system:
+  <div id="header-partial"></div>
+  <div id="footer-partial"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+- NEVER disable or remove the partials inclusion in pages
+- NEVER add navigation code directly to individual pages
+- Partials ensure consistent navigation and footer across the site
+- Any navigation/footer changes should ONLY be made in the partials
+- You CAN and SHOULD modify the partials when updates are needed
+=======================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Device Repair | iPhone, Samsung, MacBook Repair Near Me</title>
+  <meta name="description" content="Expert iPhone, Samsung, MacBook repair. Same-day screen repair, battery replacement, water damage fix. 14-day warranty.">
+  <meta name="keywords" content="device repair, iPhone repair, Samsung repair, MacBook repair, phone repair near me, laptop repair, iPad repair, smartphone repair, computer repair, phone screen repair near me, cracked screen fix">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://[yourdomain.com]/index.html" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Device Repair | iPhone, Samsung, MacBook Repair" />
+  <meta property="og:description" content="Expert iPhone, Samsung, MacBook repair. Same-day screen repair, battery replacement, water damage fix." />
+  <meta property="og:image" content="https://[yourdomain.com]/images/hero-image.webp" />
+  <meta property="og:url" content="https://[yourdomain.com]/" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Local fonts -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Function to load partials
+    function loadPartial(url, targetId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          // Extract only the body content from the partial
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = data;
+          
+          // Find the content between the body tags, excluding the body tags themselves
+          const bodyContent = data.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+          
+          if (bodyContent && bodyContent[1]) {
+            // Use the content between body tags
+            document.getElementById(targetId).innerHTML = bodyContent[1].trim();
+          } else {
+            // Fallback to using the entire content
+            document.getElementById(targetId).innerHTML = data;
+          }
+        });
+    }
+  </script>
+</head>
+<body>
+  <!-- HEADER PARTIAL - DO NOT REMOVE -->
+  <div id="header-partial"></div>
+
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="hero-heading">Fast & Reliable <span class="accent">Tech Repair</span> in [Your City/Region]</h1>
+          <p>Expert iPhone, Samsung, MacBook, and iPad repair serving [Your City/Region]. Trusted local device repair with same-day service, certified technicians, and 14-day warranty.</p>
+          <div class="hero-buttons">
+            <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+            <a href="services.html" class="btn btn-outline">Our Services</a>
+          </div>
+          <ul class="hero-features">
+            <li class="feature">
+              <span class="feature-icon" aria-hidden="true">✓</span>
+              <span class="feature-text">Certified Technicians</span>
+            </li>
+            <li class="feature">
+              <span class="feature-icon" aria-hidden="true">✓</span>
+              <span class="feature-text">Same Day Service</span>
+            </li>
+            <li class="feature">
+              <span class="feature-icon" aria-hidden="true">✓</span>
+              <span class="feature-text">14-Day Warranty</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="services-heading">Comprehensive Device Repair Services</h2>
+          <p>From cracked iPhone screens to slow MacBooks, our expert team fixes all major brands including Samsung, Apple, Dell, HP, and more. Serving [Your City/Region] with genuine parts and guaranteed results.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-image">
+              <img src="images/phone-repair.webp" alt="A hand holding an iPhone 16 Pro (in Desert Titanium color) in portrait orientation against a black background. The lock screen shows the time 9:41 on Monday, September 9, with a dark abstract wallpaper featuring flowing bronze-colored shapes and a colorful glowing edge around the phone." class="img-responsive">
+            </div>
+            <div class="service-content">
+              <div class="service-icon" aria-hidden="true">📱</div>
+              <h3>iPhone & Samsung Phone Repair</h3>
+              <p>Expert repair for iPhone 16, 15, 14, Samsung Galaxy S24, S23, Google Pixel, and all major smartphone brands. Cracked screens, battery issues, water damage, and more.</p>
+              <ul class="service-features">
+                <li>iPhone & Samsung screen replacement</li>
+                <li>Battery replacement all models</li>
+                <li>Water damage recovery</li>
+                <li>Charging port repair</li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary btn-sm">Get Free Quote</a>
+            </div>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-image">
+              <img src="images/laptop-repair.webp" alt="A Huawei MateBook D 14 laptop (gray/silver model) floating at an angle against a light blue gradient background, lid open, displaying a colorful abstract wave wallpaper in blue, orange, and purple on the screen." class="img-responsive">
+            </div>
+            <div class="service-content">
+              <div class="service-icon" aria-hidden="true">💻</div>
+              <h3>MacBook & Laptop Repair</h3>
+              <p>Professional repair for MacBook Pro, MacBook Air, Dell, HP, Lenovo, and all laptop brands. Broken screens, slow performance, keyboard issues, and hardware upgrades.</p>
+              <ul class="service-features">
+                <li>MacBook screen & keyboard repair</li>
+                <li>Slow laptop performance fix</li>
+                <li>Virus removal & cleanup</li>
+                <li>RAM & SSD upgrades</li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary btn-sm">Get Free Quote</a>
+            </div>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-image">
+              <img src="images/console-repair.webp" alt="A white PlayStation 5 Pro console (disc edition) standing vertically next to its white DualSense wireless controller, shown against a clean white background. The console features the characteristic black central stripe with subtle ventilation lines." class="img-responsive">
+            </div>
+            <div class="service-content">
+              <div class="service-icon" aria-hidden="true">🎮</div>
+              <h3>PS5, Xbox & Nintendo Switch Repair</h3>
+              <p>Expert console repair for PlayStation 5, Xbox Series X/S, Nintendo Switch OLED. Fix overheating, disc drive issues, Joy-Con drift, and HDMI problems.</p>
+              <ul class="service-features">
+                <li>PS5 & PS4 overheating repair</li>
+                <li>Xbox disc drive fixes</li>
+                <li>Nintendo Switch Joy-Con drift</li>
+                <li>Controller & HDMI repairs</li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary btn-sm">Get Free Quote</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us" aria-labelledby="why-choose-us-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="why-choose-us-heading">Why Choose [Your Company Name]?</h2>
+          <p>Your trusted local repair shop in [Your City/Region]. Expert service you can count on.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">👨‍🔧</div>
+            <h3>Expert Technicians</h3>
+            <p>Our certified technicians have 20+ years of combined experience repairing all major device brands and models.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">⏱️</div>
+            <h3>Fast Turnaround</h3>
+            <p>Most repairs completed within 24-48 hours. Emergency same-day service available for urgent repairs.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🛡️</div>
+            <h3>14-Day Warranty</h3>
+            <p>All repairs backed by our comprehensive 14-day warranty for parts and labor. Your satisfaction guaranteed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready to Fix Your Device?</h2>
+        <p>Get your free diagnostic and quote today.</p>
+        <a href="contact.html" class="btn btn-dark">Contact Us Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PARTIAL - DO NOT REMOVE -->
+  <div id="footer-partial"></div>
+  
+  <script>
+    // Load header and footer partials
+    document.addEventListener('DOMContentLoaded', function() {
+      loadPartial('partials/header.html', 'header-partial');
+      loadPartial('partials/footer.html', 'footer-partial');
+    });
+  </script>
+
+  <!-- Structured Data - LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "[Your Company Name]",
+    "description": "Expert iPhone, Samsung, MacBook repair. Same-day screen repair, battery replacement, water damage fix.",
+    "image": "https://[yourdomain.com]/images/logo.svg",
+    "url": "https://[yourdomain.com]",
+    "telephone": "[Your Phone Number]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[Your Street Address]",
+      "addressLocality": "[Your City]",
+      "addressRegion": "[Your State/Province]",
+      "postalCode": "[Your ZIP/Postal Code]",
+      "addressCountry": "[Your Country Code]"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "10:00",
+        "closes": "17:00"
+      }
+    ],
+    "priceRange": "$$",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Device Repair Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "iPhone Repair",
+            "description": "iPhone screen repair, battery replacement, water damage recovery"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Samsung Repair",
+            "description": "Samsung Galaxy screen repair and battery replacement"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "MacBook Repair",
+            "description": "MacBook Pro and Air screen repair, keyboard replacement, performance upgrades"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "iPad Repair",
+            "description": "iPad screen repair and battery replacement"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "PlayStation Repair",
+            "description": "PS5 and PS4 repair including overheating and disc drive fixes"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema for Featured Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where is [Your Company Name] located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're located at [Your Street Address] in [Your City], [Your State/Province]."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you repair iPhone screens?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we specialize in iPhone screen repair for all models including iPhone 16, 15, 14, and older. Same-day service available with a 14-day warranty."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a phone screen repair take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most phone screen repairs are completed within 24-48 hours. We also offer same-day emergency repair service for urgent cases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you repair MacBook laptops?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we repair all MacBook models including MacBook Pro and MacBook Air. We fix screens, keyboards, batteries, and offer performance upgrades."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve [Your City/Region] and surrounding areas."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
