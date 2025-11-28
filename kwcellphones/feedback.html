@@ -20,7 +20,7 @@ IMPORTANT: THIS SITE USES HTML PARTIALS FOR STANDARDIZATION
 TODO: SELF-HOST ALL ASSETS INTERNALLY FOR SPEED - NO EXTERNAL CDNs
 =======================================================================
 - Matomo analytics currently loads from external metrics.nixc.us
-- Forms submit to external forms.techdevicerepair.online subdomain
+- Forms submit to external form handler (configure endpoint below)
 - Google Maps directions link is external
 - Keep all assets local for maximum performance and privacy
 =======================================================================
@@ -39,22 +39,22 @@ GIT WORKFLOW - CRITICAL FOR ALL CHANGES
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
-  <title>Share Your Experience - [Your Company Name]</title>
-  <meta name="description" content="Help us improve by sharing your experience with [Your Company Name]. Your feedback helps us provide better service for everyone.">
+  <title>Share Your Experience - KW Cell Phones</title>
+  <meta name="description" content="Help us improve by sharing your experience with KW Cell Phones. Your feedback helps us provide better service for everyone.">
   <meta name="keywords" content="feedback tech repair, review device repair, customer experience">
   <meta name="robots" content="index, follow">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://[yourdomain.com]/feedback.html" />
+  <link rel="canonical" href="https://kwpc.motherboardrepair.ca/feedback.html" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="Share Your Experience - [Your Company Name]" />
-  <meta property="og:description" content="Help us improve by sharing your experience with [Your Company Name]. Your feedback helps us provide better service for everyone." />
-  <meta property="og:image" content="https://[yourdomain.com]/images/logo.svg" />
-  <meta property="og:url" content="https://[yourdomain.com]/feedback.html" />
+  <meta property="og:title" content="Share Your Experience - KW Cell Phones" />
+  <meta property="og:description" content="Help us improve by sharing your experience with KW Cell Phones. Your feedback helps us provide better service for everyone." />
+  <meta property="og:image" content="https://kwpc.motherboardrepair.ca/images/logo.svg" />
+  <meta property="og:url" content="https://kwpc.motherboardrepair.ca/feedback.html" />
   <meta property="og:type" content="website" />
 
   <!-- Local fonts -->
@@ -127,12 +127,11 @@ GIT WORKFLOW - CRITICAL FOR ALL CHANGES
               <div id="positive-feedback" class="feedback-followup" style="display: none;">
                 <div class="success-message">
                   <h3>Thank you for the great feedback! 🎉</h3>
-                  <p>We're thrilled you had a positive experience with [Your Company Name]. Your support means everything to us.</p>
+                  <p>We're thrilled you had a positive experience with KW Cell Phones. Your support means everything to us.</p>
                   <p>Would you be willing to share your experience on Google? A 5-star review would help other customers find our services and support local businesses like ours.</p>
 
                   <div class="google-review-section">
                     <a href="https://search.google.com/local/reviews?placeid=ChIJw4GD_t30K4gR217LOmqi-s8" target="_blank" rel="noopener noreferrer" class="btn btn-primary google-review-btn" id="google-review-btn">
-                      <span class="btn-icon">⭐</span>
                       I Would Happily Review You on Google
                     </a>
                     <p class="review-note">This will open Google in a new tab where you can leave your review.</p>
@@ -154,7 +153,7 @@ GIT WORKFLOW - CRITICAL FOR ALL CHANGES
                   <!-- Form Endpoint - COMMENTED OUT FOR TEMPLATE -->
                   <!-- 
                   To enable form submission:
-                  1. Set up your form handler endpoint (e.g., forms.[yourdomain.com]/api/submit)
+                  1. Set up your form handler endpoint (e.g., forms.kwpc.motherboardrepair.ca/api/submit)
                   2. Replace the action URL below with your endpoint
                   3. Uncomment the action attribute
                   -->
@@ -256,14 +255,14 @@ GIT WORKFLOW - CRITICAL FOR ALL CHANGES
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Share Your Experience - [Your Company Name]",
-    "description": "Help us improve by sharing your experience with [Your Company Name]. Your feedback helps us provide better service for everyone.",
-    "url": "https://[yourdomain.com]/feedback.html",
+    "name": "Share Your Experience - KW Cell Phones",
+    "description": "Help us improve by sharing your experience with KW Cell Phones. Your feedback helps us provide better service for everyone.",
+    "url": "https://kwpc.motherboardrepair.ca/feedback.html",
     "mainEntity": {
       "@type": "LocalBusiness",
-      "name": "[Your Company Name]",
+      "name": "KW Cell Phones",
       "description": "Professional device repair services for smartphones, laptops, tablets, and gaming consoles.",
-      "url": "https://[yourdomain.com]"
+      "url": "https://kwpc.motherboardrepair.ca"
     }
   }
   </script>

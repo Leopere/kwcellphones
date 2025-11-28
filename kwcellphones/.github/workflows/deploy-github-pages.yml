@@ -25,6 +25,81 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Generate Sitemap
+        run: |
+          cd kwcellphones
+          # Read domain from CNAME file
+          DOMAIN=$(cat CNAME)
+          BASE_URL="https://${DOMAIN}"
+          TODAY=$(date -u +%Y-%m-%d)
+          
+          # Start sitemap
+          cat > sitemap.xml << 'SITEMAP_HEADER'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          SITEMAP_HEADER
+          
+          # Add homepage with highest priority
+          echo "  <url>
+            <loc>${BASE_URL}/</loc>
+            <lastmod>${TODAY}</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>1.0</priority>
+          </url>" >> sitemap.xml
+          
+          # Find all HTML files and add them
+          for file in $(find . -maxdepth 1 -name "*.html" -type f | sort); do
+            filename=$(basename "$file")
+            
+            # Skip partials directory files
+            if [[ "$file" == *"/partials/"* ]]; then
+              continue
+            fi
+            
+            # Set priority based on page type
+            case "$filename" in
+              index.html)
+                continue  # Already added as homepage
+                ;;
+              services.html|contact.html)
+                priority="0.9"
+                changefreq="monthly"
+                ;;
+              phone-repair.html|laptop-repair.html|tablet-repair.html|console-repair.html)
+                priority="0.8"
+                changefreq="monthly"
+                ;;
+              about.html)
+                priority="0.7"
+                changefreq="yearly"
+                ;;
+              feedback.html|404.html)
+                priority="0.5"
+                changefreq="yearly"
+                ;;
+              *)
+                priority="0.6"
+                changefreq="monthly"
+                ;;
+            esac
+            
+            echo "  <url>
+            <loc>${BASE_URL}/${filename}</loc>
+            <lastmod>${TODAY}</lastmod>
+            <changefreq>${changefreq}</changefreq>
+            <priority>${priority}</priority>
+          </url>" >> sitemap.xml
+          done
+          
+          # Close sitemap
+          echo "</urlset>" >> sitemap.xml
+          
+          # Update robots.txt with correct sitemap URL
+          sed -i "s|Sitemap:.*|Sitemap: ${BASE_URL}/sitemap.xml|" robots.txt
+          
+          echo "Generated sitemap.xml with base URL: ${BASE_URL}"
+          cat sitemap.xml
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 

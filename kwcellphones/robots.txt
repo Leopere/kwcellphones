@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /feedback.html
-Sitemap: https://[yourdomain.com]/sitemap.xml
+Sitemap: https://kwpc.motherboardrepair.ca/sitemap.xml

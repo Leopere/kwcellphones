@@ -1,17 +1,19 @@
 /* Base Styles */
 :root {
-  /* Analogous palette from color-palette.svg (Section 5) */
-  --primary: #D4AF37; /* Gold */
-  --primary-hover: #D48637; /* Orange Gold */
-  --primary-light: rgba(230, 168, 77, 0.12); /* Amber at low opacity */
-  /* Optional additional accents from the Analogous range */
+  /* KW Cell Phones Brand Colors - matching live site */
+  --primary: #f2cc0c; /* KW Gold/Yellow - from live site */
+  --primary-hover: #d4b30a; /* Darker gold on hover */
+  --primary-light: rgba(242, 204, 12, 0.12); /* Gold at low opacity */
+  /* Optional additional accents */
   --analogous-amber: #E6A84D; /* Amber */
   --analogous-yellow-green: #C9D437; /* Yellow Green */
   --analogous-pale-yellow: #DDE66E; /* Pale Yellow */
+  --brand-blue: #2f5aae; /* KW Brand Blue - from live site */
+  --brand-blue-dark: #060b73; /* Dark Blue - from live site header */
 
   --dark: #000000;
   --white: #ffffff;
-  --gray-50: #f9fafb;
+  --gray-50: #f4f5f7; /* Light bg - from live site */
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;
   --gray-300: #d1d5db;
@@ -19,13 +21,13 @@
   --gray-500: #6b7280;
   --gray-600: #4b5563;
   --gray-700: #374151;
-  --gray-800: #1f2937;
-  --gray-900: #111827;
+  --gray-800: #272626; /* Text color - from live site */
+  --gray-900: #121212; /* Dark bg - from live site */
   --success: #10b981;
   --error: #ef4444;
   --warning: #f59e0b;
   --info: #3b82f6;
-  --focus-ring: 0 0 0 3px rgba(212, 175, 55, 0.4); /* Gold focus ring */
+  --focus-ring: 0 0 0 3px rgba(242, 204, 12, 0.4); /* Gold focus ring */
 }
 
 * {
@@ -232,7 +234,7 @@ p {
 .header {
   position: sticky;
   top: 0;
-  background-color: var(--white);
+  background-color: var(--brand-blue-dark); /* Dark blue from live site */
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   z-index: 100;
   padding: 0;
@@ -317,7 +319,7 @@ p {
 .brand-text {
   font-size: 1.4878125rem; /* Increased by another 15% (1.29375 * 1.15) */
   font-weight: 700;
-  color: var(--gray-900);
+  color: var(--white); /* White on dark blue header */
   display: inline;
 }
 
@@ -397,7 +399,7 @@ p {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--dark);
+  background-color: var(--white); /* White on dark blue header */
   margin: 4px 0;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -414,11 +416,11 @@ p {
     top: 100%;
     right: 0;
     left: 0;
-    background: var(--white);
+    background: var(--brand-blue-dark); /* Dark blue dropdown */
     flex-direction: column;
     padding: 1rem;
-    border-top: 1px solid var(--gray-200);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 101;
   }
 
@@ -464,6 +466,7 @@ p {
   font-weight: 500;
   transition: color 0.3s ease;
   padding: 0.75rem 1rem;
+  color: var(--white); /* White text on dark blue header */
 }
 
 .nav-link:hover,
@@ -799,8 +802,8 @@ section {
 
 /* CTA Section */
 .cta {
-  background-color: var(--primary);
-  color: var(--dark);
+  background-color: var(--brand-blue-dark); /* Dark blue like live site */
+  color: var(--white);
   text-align: center;
   padding: 4rem 0;
 }
@@ -987,8 +990,8 @@ section {
 }
 
 .warranty-content {
-  background-color: var(--primary);
-  color: var(--dark);
+  background-color: var(--brand-blue-dark); /* Dark blue like live site */
+  color: var(--white);
   padding: 3rem;
   border-radius: 1rem;
   text-align: center;
@@ -1161,8 +1164,8 @@ section {
 }
 
 .emergency-section {
-  background-color: var(--primary);
-  color: var(--dark);
+  background-color: var(--brand-blue-dark); /* Dark blue like live site */
+  color: var(--white);
   text-align: center;
   padding: 4rem 0;
 }
@@ -1210,10 +1213,10 @@ section {
     --gray-800: #F9FAFB; /* Primary text */
     --gray-900: #0A0A0A; /* Near black surface */
     
-    /* Gold Accents - Brightened for dark mode */
-    --primary: #F5D858; /* Bright gold for high contrast */
-    --primary-hover: #E6C96F; /* Gold hover */
-    --primary-light: rgba(245, 216, 88, 0.15); /* Bright gold with opacity */
+    /* Gold Accents - KW Brand Colors brightened for dark mode */
+    --primary: #f5d54a; /* Bright gold for high contrast */
+    --primary-hover: #f2cc0c; /* Gold hover */
+    --primary-light: rgba(242, 204, 12, 0.15); /* Bright gold with opacity */
     
     /* Supporting Colors - Already optimized for dark mode */
     --success: #10B981;
@@ -1222,7 +1225,7 @@ section {
     --info: #3B82F6;
     
     /* Focus ring - Brighter for dark mode */
-    --focus-ring: 0 0 0 3px rgba(245, 216, 88, 0.5);
+    --focus-ring: 0 0 0 3px rgba(242, 204, 12, 0.5);
   }
   
   /* Body background and text colors */
@@ -1315,18 +1318,18 @@ section {
   
   /* CTA Section */
   .cta {
-    background-color: var(--primary) !important;
-    color: #000000 !important;
+    background-color: var(--brand-blue-dark) !important;
+    color: #FFFFFF !important;
   }
   
   .warranty-content {
-    background-color: var(--primary) !important;
-    color: #000000 !important;
+    background-color: var(--brand-blue-dark) !important;
+    color: #FFFFFF !important;
   }
   
   .emergency-section {
-    background-color: var(--primary) !important;
-    color: #000000 !important;
+    background-color: var(--brand-blue-dark) !important;
+    color: #FFFFFF !important;
   }
   
   /* Footer */
